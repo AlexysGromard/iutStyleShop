@@ -1,1 +1,1 @@
-# iutShop
+# iutStyleShop
