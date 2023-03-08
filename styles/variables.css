@@ -6,4 +6,10 @@
     --green: #78BC61;
     --white: #F6F7F9;
     --red: #EF233C;
+    /* Fonts */
+    font-size: 12px; /* Default size */
+    --very-small : 1em;
+    --small : 1.167em;
+    --medium: 1.333em;
+    --big: 1.833em;
 }
