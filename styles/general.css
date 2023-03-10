@@ -1,1 +1,15 @@
 /* test */
+
+
+.barred-de-Recherche{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    background-color: var(--grey);
+}
+
+.image-loupe{
+    width: 20px;
+}
