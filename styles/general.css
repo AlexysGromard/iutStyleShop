@@ -1,13 +1,19 @@
-/* test */
+/* General */
+body{
+    background-color: var(--background);
+}
 
-
-.barred-de-Recherche{
+.barre-de-recherche{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #F1F3F4;
+    border-radius: 20px;
+    align-items: center;
+}
 
-
-    background-color: var(--grey);
+.barre-de-recherche div{
+    padding: 10px;
 }
 
 .image-loupe{
