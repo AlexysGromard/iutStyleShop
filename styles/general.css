@@ -1,13 +1,31 @@
-/* test */
+/* General */
+body{
+    background-color: var(--background);
+}
 
-
-.barred-de-Recherche{
+.barre-de-recherche{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #F1F3F4;
+    border-radius: 20px;
+    align-items: center;
+}
 
+.barre-de-recherche div:first-child{
+    display: flex;
+    align-items: center;
+    gap : 12px;
+    padding: 10px 15px;
+}
+.barre-de-recherche div:first-child input , .barre-de-recherche div:first-child input:focus {
+    /*font-family: 'Roboto';*/
+    font-size: 16px;
+    font-weight: 400;
 
-    background-color: var(--grey);
+    border: none;
+    background: none;
+    outline:  none;
 }
 
 .image-loupe{
