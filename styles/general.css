@@ -1,6 +1,19 @@
+/* Font */
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
 .search-bar{
@@ -32,4 +45,75 @@ body{
     width: 20px;
     -webkit-user-select: none;
     user-select: none;
+}
+
+/* Footer */
+footer{
+    padding: 30px 74px;
+    background-color: var(--black);
+    display: flex;
+    color: var(--white);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    gap: 4.69%;
+}
+#footer-logo{
+    align-self: baseline;
+}
+.footer-box-container{
+    margin: 0 10px;
+    width: max-content;
+}
+.footer-box-title{
+    font-size: var(--medium);
+    font-weight: medium;
+    margin-bottom: 2px;
+}
+.footer-box{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    border-top: var(--white) 1px solid;
+}
+.footer-box ul{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+}
+.footer-box li{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    line-height: var(--small);
+}
+.footer-box li a{
+    font-size: var(--small);
+    text-decoration: none;
+    color: var(--white);
+    width: 100%;
+    white-space: nowrap;
+}
+#payment-methods-images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+/* max-width: 1005px Footer */
+@media screen and (max-width: 1005px) {
+    footer{
+        padding: 30px 5%;
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+/* Media Queries Mobile */
+@media screen and (max-width: 768px) {
+    footer{
+        flex-direction: column;
+        gap: 25px;
+    }
 }
