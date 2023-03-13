@@ -3,7 +3,7 @@ body{
     background-color: var(--background);
 }
 
-.barre-de-recherche{
+.search-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,13 +12,13 @@ body{
     align-items: center;
 }
 
-.barre-de-recherche div:first-child{
+.search-bar div:first-child{
     display: flex;
     align-items: center;
     gap : 12px;
     padding: 10px 15px;
 }
-.barre-de-recherche div:first-child input , .barre-de-recherche div:first-child input:focus {
+.search-bar div:first-child input , .search-bar div:first-child input:focus {
     /*font-family: 'Roboto';*/
     font-size: 16px;
     font-weight: 400;
@@ -30,4 +30,6 @@ body{
 
 .image-loupe{
     width: 20px;
+    -webkit-user-select: none;
+    user-select: none;
 }
