@@ -79,6 +79,7 @@ footer{
     align-items: center;
     border-top: 1px solid var(--white);
     padding-top: 7px;  
+    gap: 30px;
 }
 .footer-box ul{
     gap: 5px;
