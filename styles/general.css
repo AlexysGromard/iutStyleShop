@@ -35,3 +35,62 @@ body{
     -webkit-user-select: none;
     user-select: none;
 }
+
+
+
+.link-to-home{
+    background: none;
+    border:none;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+
+.header-down{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    padding: 1px 77px 1px 77px;
+}
+
+
+.header-down-link{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    padding: 6px;
+}
+
+.header-down button{
+    background: none;
+    border: none;
+
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 6px;
+}
+
+.header-down button span{
+    color: var(--white);
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.header-down button img{
+    height: 16px;
+    width: 16px;
+}
+
+.horizontal-line{
+    height : 33px;
+}
+
