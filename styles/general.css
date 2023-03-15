@@ -48,6 +48,46 @@ body{
     -webkit-user-select: none;
     user-select: none;
 }
+/* Button */
+
+/*text*/
+.important-text{
+    font-weight: 500;
+    font-size: var(--medium);
+    color: var(--white);
+    line-height: 19px;
+}
+
+.basic-text{
+    color: var(--white);
+    font-size: var(--small);
+}
+.button{
+    display: flex;
+    padding: 0 16px;
+    width: 100%;
+    height: 33px;
+    background-color: var(--red);
+    border-radius:16.5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    transition: filter 0.2s;
+}
+.button:hover{
+    filter: brightness(0.8);
+}
+.button:active{
+    filter: brightness(0.6);
+}
+.small-size{
+    max-width:116px;
+}
+.medium-size{
+    max-width:148px;
+}
 
 /* Footer */
 footer{
