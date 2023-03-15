@@ -48,6 +48,45 @@ body{
     -webkit-user-select: none;
     user-select: none;
 }
+/* Button */
+
+/*text*/
+.important-text{
+    font-weight: 600;
+    font-size: var(--medium);
+    color:var(--white);
+    line-height: 19px;
+}
+
+.basic-text{
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--white);
+    font-size: var(--small);
+}
+
+
+.button{
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 33px;
+    background-color: var(--red);
+    border-radius:16.5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.small-size{
+    width:116px;
+}
+
+.medium-size{
+    width:148px;
+}
 
 /* Footer */
 footer{
