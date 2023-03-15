@@ -52,7 +52,7 @@ body{
 
 /*text*/
 .important-text{
-    font-weight: 600;
+    font-weight: 500;
     font-size: var(--medium);
     color:var(--white);
     line-height: 19px;
@@ -77,6 +77,13 @@ body{
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: filter 0.2s;
+}
+.button:hover{
+    filter: brightness(0.8);
+}
+.button:active{
+    filter: brightness(0.6);
 }
 
 
