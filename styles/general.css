@@ -3,6 +3,7 @@ body{
     background-color: var(--background);
 }
 
+/*Start search-bar*/
 .search-bar{
     display: flex;
     flex-direction: row;
@@ -22,7 +23,7 @@ body{
 .search-bar div:first-child input , .search-bar div:first-child input:focus {
     font-family: 'Roboto';
     display: flex;
-    font-size: 16px;
+    font-size: var(--medium);
     font-weight: 400;
 
     border: none;
@@ -34,4 +35,35 @@ body{
     width: 20px;
     -webkit-user-select: none;
     user-select: none;
+}
+/*End search-bar*/
+
+
+/**/
+
+span{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: var(--medium);
+
+    color: var(--black);
+}
+
+span + span{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: var(--very-small);
+
+    color: var(--grey);
+}
+
+.image-user{
+    width: 40px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.navigation-link-header{
+    display: flex;
+    
 }

@@ -5,19 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>components</title>
-    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/general.css">
 </head>
 <body>
     <!-- This page is not show on the website -->
-    <!-- Search bar -->
-    <label class="search-bar" for="search">
+
+    <header>
         <div>
-            <label for="search"><img alt="Image de loupe" src="assets/images/Loupe.svg" class="image-loupe"></label>
-            <input type="text" id="search" name="search" placeholder="Rechercher un article">
+            <!-- Search bar -->
+            <label class="search-bar" for="search">
+                <div>
+                    <label for="search"><img alt="Image of loupe" src="assets/images/loupe.svg" class="image-loupe"></label>
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <!-- Search Button -->
+                <div>Rechercher</div>
+            </label>
         </div>
-        <!-- Search Button -->
-        <div>Rechercher</div>
+        
+    </header>
+
+    <label class="navigation-link-header">
+        <div>
+            <span>Connexion</span>
+            <span>Inscription</span>
+        </div>
+        <img alt="Image of user" src="assets/images/user.svg" class="image-user">
     </label>
+
 </body>
 </html>
