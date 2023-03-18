@@ -11,6 +11,7 @@ body{
     background-color: #F1F3F4;
     border-radius: 20px;
     align-items: center;
+    flex-grow: 1;
 }
 
 .search-bar div:first-child{
@@ -40,8 +41,7 @@ body{
 /*End search-bar*/
 
 
-/**/
-
+/*-------------------------------------------------------------*/
 span{
     font-family: 'Roboto';
     font-weight: 500;
@@ -58,12 +58,6 @@ span + span{
     color: var(--grey);
 }
 
-.image-user{
-    width: 40px;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
 
 .link-to-home{
     background: none;
@@ -73,7 +67,39 @@ span + span{
     user-select: none;
 }
 
+.navigation-link-header{
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
 
+    background: none;
+    border: none;
+    text-decoration:none;
+    transition: filter 0.1s;
+}
+
+/* Comportement non correct */
+
+.navigation-link-header:hover{
+    filter: brightness(0.8)
+}
+
+.navigation-link-header:active{
+    filter: brightness(0.6)
+}
+
+.navigation-link-header div{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-link-header img{
+    width: 40px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*-------------------------------------------------------------*/
 
 .header-down{
     background-color: var(--black);
@@ -130,13 +156,23 @@ span + span{
     width: 16px;
 }
 
-.navigation-link-header{
-    display: flex;
-    
-}
-
 .horizontal-line{
     height : 33px;
 }
 
+/*-------------------------------------------------------------*/
 
+.header-top{
+    display: flex;
+    flex-direction: row;
+    gap: 62px;
+
+    padding: 20px 64px 20px 77px;
+    
+}
+
+.header-top div:last-child{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
