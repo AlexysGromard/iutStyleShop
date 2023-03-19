@@ -89,13 +89,70 @@ body{
     max-width:148px;
 }
 
+/*Article*/
+
+.Boite_article{
+    display: flex;
+    background: var(--white);
+    width: 292px;
+    flex-direction: column;
+}
+
+.image{
+    height: 292px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+
+.bas_article{
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 14px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.etoiles{
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.disponibilite{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;;
+}
+
+.prix{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+}
+
+.green{
+    color: var(--green);
+}
+
+.prix-bouton{
+    margin-top: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 57px;
+}
+
 /* Footer */
 footer{
     padding: 30px 74px;
     background-color: var(--black);
     display: flex;
     color: var(--white);
-    position: absolute;
     width: 100%;
     bottom: 0;
     gap: 4.69%;
