@@ -25,6 +25,7 @@ body{
     border-radius: 20px;
     align-items: center;
     flex-grow: 1;
+    height: fit-content;
 }
 
 .search-bar div:first-child{
@@ -40,6 +41,8 @@ body{
     font-size: var(--medium);
     font-weight: 400;
 
+    width: 100%;
+
     border: none;
     background: none;
     outline:  none;
@@ -49,6 +52,11 @@ body{
     width: 20px;
     -webkit-user-select: none;
     user-select: none;
+}
+
+#recherche-button{
+    height: 100%;
+
 }
 
 /*End search-bar*/
@@ -113,7 +121,7 @@ span + span{
 
 .navigation-link-header img{
     width: 40px;
-
+}
 /* Button */
 
 /*text*/
@@ -254,7 +262,8 @@ span + span{
     flex-direction: row;
     gap: 8px;
 }
-=======
+
+
 .medium-important-text{
     font-size: var(--medium);
     font-weight: 500;
