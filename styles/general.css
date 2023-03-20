@@ -41,7 +41,7 @@ body{
 /*End search-bar*/
 
 
-/*-------------------------------------------------------------*/
+/*---------------------------navigation-link-header----------------------------------*/
 span{
     font-family: 'Roboto';
     font-weight: 500;
@@ -65,6 +65,10 @@ span + span{
 
     -webkit-user-select: none;
     user-select: none;
+    padding: 5px;
+    transition: filter 0.1s;
+
+    cursor: pointer;
 }
 
 .navigation-link-header{
@@ -76,16 +80,17 @@ span + span{
     border: none;
     text-decoration:none;
     transition: filter 0.1s;
+    padding: 5px;
+
+    cursor: pointer;
 }
 
-/* Comportement non correct */
-
-.navigation-link-header:hover{
-    filter: brightness(0.8)
+.navigation-link-header:hover, .link-to-home:hover{
+    filter: opacity(0.7);
 }
 
-.navigation-link-header:active{
-    filter: brightness(0.6)
+.navigation-link-header:active, .link-to-home:active{
+    filter: opacity(0.4);
 }
 
 .navigation-link-header div{
@@ -131,6 +136,8 @@ span + span{
 
     text-decoration:none;
     transition: filter 0.1s;
+
+    cursor: pointer;
 }
 
 .header-down a:hover{
@@ -167,12 +174,12 @@ span + span{
     flex-direction: row;
     gap: 62px;
 
-    padding: 20px 64px 20px 77px;
+    padding: 15px 64px 15px 77px;
     
 }
 
 .header-top div:last-child{
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 8px;
 }
