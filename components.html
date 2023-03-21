@@ -10,12 +10,68 @@
 </head>
 <body>
     <!-- This page is not show on the website -->
-    <!-- Search bar -->
-    <label class="search-bar" for="search">
-        <div>
-            <label for="search"><img alt="Image de loupe" src="assets/images/Loupe.svg" class="image-loupe"></label>
-            <input type="text" id="search" name="search" placeholder="Rechercher un article">
+
+    <header>
+        <div class="header-top">
+            <a class="link-to-home" href="index.html"><img src="assets/images/Header-Image/logo.svg" alt="Image logo"></a>
+            
+            <label class="search-bar" for="search"><!-- Search bar -->
+                <div>
+                    <img alt="Image of loupe" src="assets/images/loupe.svg" class="image-loupe">
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
+            </label>
+
+            <div>
+                <button class="navigation-link-header">
+                    <div>
+                        <span>Connexion</span>
+                        <span>Inscription</span>
+                    </div>
+                    <img alt="Image of user" src="assets/images/user.svg">
+                </button>
+                <a class="navigation-link-header" href="cart.html">
+                    <div>
+                        <span>Pannier</span>
+                        <span>0 articles</span>
+                    </div>
+                    <img alt="Image of shopping cart" src="assets/images/Header-Image/panier.svg">
+                </a>
+            </div>
+
         </div>
+        <div class="header-down">
+            <div class="header-down-link">
+                <a href="all-products.html">
+                    <img src="assets/images/Header-Image/grid.svg" alt="grid">
+                    <span>Tous les produits</span>
+                </a>
+                <img src="assets/images/Header-Image/line.svg" alt="horizontal-line" class="horizontal-line">
+                <a>
+                    <img src="assets/images/Header-Image/t-shirt.svg" alt="t-shirt">
+                    <span>T-Shirt</span>
+                </a>
+                <a>
+                    <img src="assets/images/Header-Image/sweatshirt.svg" alt="sweatshirt">
+                    <span>Sweat-shirt </span>
+                </a>
+                <a>
+                    <img src="assets/images/Header-Image/jogger-pants.svg" alt="jogger-pants">
+                    <span>Tenue de sport</span>
+                </a>
+                <a>
+                    <img src="assets/images/Header-Image/accessories.svg" alt="accessories">
+                    <span>Accessoire</span>
+                </a>
+            </div>
+            
+            <a class="small-size button basic-text" href="#">Promotions</a>
+            
+        </div>
+            
+        
+    </header>
         <!-- Search Button -->
         <div>Rechercher</div>
      </label>
@@ -23,7 +79,7 @@
     
     <!--Buttons-->
     <a class="small-size button basic-text" href="#">Promotions</a>
-    <a class="small-size button important-text" href="#">Rechercher</a>
+    <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
     <a class="medium-size button basic-text" href="#">Ajouter au panier</a>
     
     <!-- Article -->
