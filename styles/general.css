@@ -225,17 +225,17 @@ span + span{
     cursor: pointer;
 }
 
-.header-down a:hover{
+.header-down div a:hover{
     filter: brightness(0.8)
 }
 
-.header-down a:active{
+.header-down div a:active{
     filter: brightness(0.6)
 }
 
 
 
-.header-down a span{
+.header-down div a span{
     color: var(--white);
 
     font-family: 'Roboto';
@@ -243,7 +243,7 @@ span + span{
     font-size: 14px;
 }
 
-.header-down a img{
+.header-down div a img{
     height: 16px;
     width: 16px;
 }
