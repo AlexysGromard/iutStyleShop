@@ -124,6 +124,12 @@ span + span{
 }
 /* Button */
 
+#button-rechercher{
+    max-width: 114px;
+    height: 40px;
+    border-radius: 19.5px;
+}
+
 /*text*/
 .important-text{
     font-weight: 500;
@@ -204,7 +210,7 @@ span + span{
     padding: 6px;
 }
 
-.header-down a{
+.header-down div a{
     background: none;
     border: none;
 
