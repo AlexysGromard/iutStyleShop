@@ -5,15 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IutStyleShop</title>
-    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/general.css">
     <link rel="stylesheet" href="./styles/homePage.css">
     <link rel="stylesheet" href="./styles/carousel.css">
 </head>
 <body>
     <header>
-        <!-- Header -->
+        <div class="header-top">
+            <a class="link-to-home" href="index.html"><img src="assets/images/Header-Image/logo.svg" alt="Image logo"></a>
+            <label class="search-bar" for="search"><!-- Search bar -->
+                <div>
+                    <img alt="Image of loupe" src="assets/images/loupe.svg" class="image-loupe">
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
+            </label>
+            <div>
+                <button class="navigation-link-header">
+                    <div>
+                        <span>Connexion</span>
+                        <span>Inscription</span>
+                    </div>
+                    <img alt="Image of user" src="assets/images/user.svg">
+                </button>
+                <a class="navigation-link-header" href="cart.html">
+                    <div>
+                        <span>Pannier</span>
+                        <span>0 articles</span>
+                    </div>
+                    <img alt="Image of shopping cart" src="assets/images/Header-Image/panier.svg">
+                </a>
+            </div>
+        </div>
+        <div class="header-down">
+            <div class="header-down-link">
+                <a href="all-products.html">
+                    <img src="assets/images/Header-Image/grid.svg" alt="grid">
+                    <span>Tous les produits</span>
+                </a>
+                <img src="assets/images/Header-Image/line.svg" alt="horizontal-line" class="horizontal-line">
+                <a>
+                    <img src="assets/images/Header-Image/t-shirt.svg" alt="t-shirt">
+                    <span>T-Shirt</span>
+                </a>
+                <a>
+                    <img src="assets/images/Header-Image/sweatshirt.svg" alt="sweatshirt">
+                    <span>Sweat-shirt </span>
+                </a>
+                <a>
+                    <img src="assets/images/Header-Image/jogger-pants.svg" alt="jogger-pants">
+                    <span>Tenue de sport</span>
+                </a>
+                <a>
+                    <img src="assets/images/Header-Image/accessories.svg" alt="accessories">
+                    <span>Accessoire</span>
+                </a>
+            </div>
+            <a class="small-size button basic-text" href="#">Promotions</a>
+        </div>
     </header>
+    <!-- Carrousel -->
     <section class="carousel">
         <a class="prev"><img src="assets/icons/arrow.png" alt="Previous button"></a>
         <figure class="carousel-images">
@@ -23,6 +75,23 @@
         </figure>
         <a class="next"><img src="assets/icons/arrow.png" alt="Next button"></a>
     </section>
+    <!-- Section products -->
+    <section id="bestsellers-section">
+        <div id="header-products">
+            <!-- Section title -->
+            <div class="section-title">
+                <span class="section-title-name">Meilleures ventes</span>
+                <span class="section-title-results">3 articles</span>
+            </div>
+            <!-- Btn 'All products' -->
+            <a class="header-products-btn" href="#">
+                Afficher tous les articles
+                <img src="assets/icons/grid.png" alt="Grid">
+            </a>
+        </div>
+        
+    </section>
+    
 </body>
 <script src="./scripts/carousel.js"></script>
 </html>
