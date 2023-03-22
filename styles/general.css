@@ -12,7 +12,6 @@
 body{
     background-color: var(--background);
     font-family: 'Roboto', sans-serif;
-    position: relative;
     min-height: 100vh;
 }
 
@@ -358,7 +357,6 @@ footer{
     padding: 30px 74px;
     background-color: var(--black);
     display: flex;
-    position: absolute;
     color: var(--white);
     width: 100%;
     bottom: 0;
