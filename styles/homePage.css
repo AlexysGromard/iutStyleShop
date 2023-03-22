@@ -1,0 +1,28 @@
+/* Header */
+header{
+    margin-bottom: 12px;
+}
+
+/* bestsellers-section */
+#bestsellers-section{
+    margin: 39px auto 107px auto;
+    padding: 0 50px;
+    max-width: 1124px;
+}
+
+
+/* Products */
+#products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 20px 7%;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    #products{
+        justify-content: center;
+    }
+}
