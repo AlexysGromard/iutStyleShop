@@ -388,6 +388,10 @@ span + span{
     color: var(--green);
 }
 
+.dark-grey{
+    color:var(--dark-grey);
+}
+
 .price-btn{
     margin-top: 6px;
     display: flex;
