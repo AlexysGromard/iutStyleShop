@@ -212,9 +212,56 @@ span + span{
     padding-top: 25px;
     padding-left: 25px;
     padding-bottom: 38px;
+    padding-right: 221px;
     display: flex;
     flex-direction: column;
     gap:4px;
+}
+
+.clickable{
+    cursor:pointer
+}
+
+.text-quantity{
+    width: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+.quantity{
+    height: 21px;
+    width: 49px;
+    padding-left: 9px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    border: 1px solid var(--dark-grey);
+    border-radius: 10.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price2{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--dark-grey);
+    padding-left: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross{
+    padding-left: 74px;
+    padding-right: 25px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 
 /*-------------------------------------------------------------*/
