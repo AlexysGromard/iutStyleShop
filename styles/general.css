@@ -334,6 +334,7 @@ span + span{
     align-items: center;
     font-size: var(--medium);
     color: var(--black);
+    text-align: end;
     transition: filter 0.2s;
 }
 .header-products-btn:hover{
@@ -427,5 +428,15 @@ footer{
         gap: 25px;
         flex-wrap: wrap;
         justify-content: flex-start;
+    }
+    /* Products title */
+    .header-products-btn{
+        font-size: var(--very-small);
+    }
+    .section-title-name{
+        font-size: var(--medium);
+    }
+    .section-title-results{
+        font-size: var(--very-small);
     }
 }
