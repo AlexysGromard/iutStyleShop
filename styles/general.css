@@ -15,6 +15,11 @@ body{
     min-height: 100vh;
 }
 
+/* Header */
+header{
+    width: 100%;
+}
+
 /*Start search-bar*/
 .search-bar{
     display: flex;
@@ -422,6 +427,29 @@ footer{
 
 /* Media Queries Mobile */
 @media screen and (max-width: 768px) {
+    /* Header */
+    .header-top{
+        flex-direction: column;
+        gap: 3px;
+        padding: 10px 25px;
+    }
+    .header-down{
+        padding: 0;
+        overflow: scroll;
+    }
+    .header-down a {
+        width: max-content;
+    }
+    .header-down img{
+        display: none;
+    }
+    #shopping-cart-text{
+        display: none;
+    }
+    .search-bar{
+        order: 3;
+    }
+    /* Footer */
     footer{
         gap: 25px;
         flex-wrap: wrap;
