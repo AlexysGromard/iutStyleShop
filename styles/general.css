@@ -63,7 +63,7 @@ body{
 
 
 /*---------------------------navigation-link-header----------------------------------*/
-span{
+.main-text{
     font-family: 'Roboto';
     font-weight: 500;
     font-size: var(--medium);
@@ -71,7 +71,7 @@ span{
     color: var(--black);
 }
 
-span + span{
+.main-text + span{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: var(--very-small);
