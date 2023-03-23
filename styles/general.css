@@ -169,6 +169,10 @@ span + span{
     max-width:148px;
 }
 
+.big-size{
+    max-width: 867px;
+}
+
 /*Article*/
 
 .boite_article{
