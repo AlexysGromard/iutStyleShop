@@ -15,6 +15,11 @@ body{
     min-height: 100vh;
 }
 
+/* Header */
+header{
+    width: 100%;
+}
+
 /*Start search-bar*/
 .search-bar{
     display: flex;
@@ -62,7 +67,7 @@ body{
 
 
 /*---------------------------navigation-link-header----------------------------------*/
-span{
+.navigation-link-header-title{
     font-family: 'Roboto';
     font-weight: 500;
     font-size: var(--medium);
@@ -70,7 +75,7 @@ span{
     color: var(--black);
 }
 
-span + span{
+.navigation-link-header-desc{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: var(--very-small);
@@ -116,6 +121,7 @@ span + span{
 .navigation-link-header div{
     display: flex;
     flex-direction: column;
+    text-align: end;
 }
 
 .navigation-link-header img{
@@ -422,6 +428,54 @@ footer{
 
 /* Media Queries Mobile */
 @media screen and (max-width: 768px) {
+    /* Header */
+    .header-top{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 15px;
+    }
+    .header-down{
+        padding: 0;
+        overflow-x: scroll;
+    }
+    .header-down a {
+        width: max-content;
+    }
+    .header-down img{
+        display: none;
+    }
+    #shopping-cart-text{
+        display: none;
+    }
+    .navigation-link-header{
+        gap: 5px;
+    }
+    .search-bar{
+        order: 3;
+    }
+    .link-to-home{
+        height: 40px;
+        width: max-content;
+    }
+    .link-to-home img{
+        height: 100%;
+    }
+    .header-top div:last-child{ 
+        margin: 0 0 0 auto;
+        height: 40px;
+        gap: 0;
+    }
+    .navigation-link-header img{
+        height: 100%;
+    }
+    .navigation-link-header-title{
+        font-size: var(--small);
+    }
+    .navigation-link-header-desc{
+        font-size: var(--very-small);
+    }
+    /* Footer */
     footer{
         gap: 25px;
         flex-wrap: wrap;
