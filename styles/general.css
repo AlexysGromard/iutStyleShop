@@ -226,20 +226,17 @@ span + span{
     cursor:pointer
 }
 
-.text-quantity{
-    width: 100%;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: var(--dark-grey);
-}
 
 .quantity-size{
     max-width: 49px;
 }
 
-.quantity{
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     height: 21px;
     width: 100%;
     padding-left: 9px;
@@ -251,7 +248,19 @@ span + span{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--dark-grey);
+    outline: none;
 }
+
+select ::after{
+    content : '';
+    width:14px;
+    background-image: url("assets/icons/up-arrow.svg");
+}
+
 
 .price2{
     font-weight: 600;
@@ -271,7 +280,6 @@ span + span{
     align-items:center;
     justify-content: center;
 }
-
 /*-------------------------------------------------------------*/
 
 .header-down{
