@@ -9,11 +9,17 @@ main{
 
 /* sort-order (Select/otpion) */
 #sort-order{
-    /* Delete styles default */
-    background: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../assets/icons/arrow-all-products.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px 16px;  
+    padding-right: 20px;
+    background-color: transparent;
     border: none;
     outline: none;
-    text-align: end;
+    text-align-last: right;    
     color: var(--dark-grey);
     font-size: var(--medium);
     cursor: pointer;
