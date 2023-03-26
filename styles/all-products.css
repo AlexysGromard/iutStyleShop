@@ -1,0 +1,125 @@
+/* Main */
+main{
+    margin: 45px 77px 94px 77px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 54px;
+}
+
+/* sort-order (Select/otpion) */
+#sort-order{
+    /* Delete styles default */
+    background: none;
+    border: none;
+    outline: none;
+    text-align: end;
+    color: var(--dark-grey);
+    font-size: var(--medium);
+    cursor: pointer;
+    transition: 0.2s filter;
+}
+#sort-order:hover{
+    filter: opacity(0.7);
+}
+
+/* articles */
+#articles-part{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* products-section */
+#products-section{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 38px;
+    width: 100%;
+}
+
+/* filter-section */
+#filter-section{
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    width: 100%;
+    margin-top: 28px;
+}
+#filter-section-title{
+    font-size: var(--big);
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+.filter-title{
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    font-size: var(--medium);
+    margin-bottom: 11px;
+}
+
+.range_container {
+    display: flex;
+    flex-direction: column;
+    height: 10px;
+    margin-top: 11px;
+}
+  
+  .sliders_control {
+    position: relative;
+  }
+  
+  .form_control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #635a5a;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 16px;
+    height: 16px;
+    background-color: var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: filter 0.2s;
+  }
+  input[type=range]::-webkit-slider-thumb:hover {
+    filter: brightness(0.8);
+  }
+
+
+  input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background-color: #FFC1C1;
+    pointer-events: none;
+  }
+  
+  #fromSlider {
+    height: 0;
+    z-index: 1;
+    margin-top: 3px;
+  }
+
+/* range-values */
+#range-values{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 13px;
+    font-size: var(--small);
+    color: var(--red);
+    font-weight: 500;
+}
+#range-values span::after{
+    content: "€";
+}

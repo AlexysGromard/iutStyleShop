@@ -1,0 +1,31 @@
+{
+    "articles": [
+      {
+        "nom": "Article 1",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "article1",
+        "prix": 10.99,
+        "images": ["image1.jpg", "image2.jpg"],
+        "note": 4.5,
+        "disponibilite": true
+      },
+      {
+        "nom": "Article 2",
+        "description": "Description de l'article 2",
+        "nomDeDossier": "article2",
+        "prix": 24.99,
+        "images": ["image3.jpg", "image4.jpg"],
+        "note": 3,
+        "disponibilite": false
+      },
+      {
+        "nom": "Article 3",
+        "description": "Description de l'article 3",
+        "nomDeDossier": "article3",
+        "prix": 15.50,
+        "images": ["image5.jpg"],
+        "note": 5,
+        "disponibilite": true
+        }
+    ]
+}
