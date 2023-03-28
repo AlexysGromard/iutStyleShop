@@ -129,9 +129,9 @@
         <!-- Section filters -->
         <section id="filter-section">
             <span id="filter-section-title">Filter votre recherche</span>
-            <div id="price-slider">
+            <!-- Price Slider -->
+            <div class="filter-container" id="price-slider">
                 <span class="filter-title">prix</span>
-
                 <div class="range_container">
                     <div class="sliders_control">
                         <input id="fromSlider" type="range" value="0" min="0" max="100"/>
@@ -142,6 +142,28 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Product type -->
+            <span class="filter-title">type de produit</span>
+            <div class="range_container">
+                <ul id="product-type">
+                    <li>
+                        <input type="checkbox" id="tshirt" name="tshirt" value="tshirt">
+                        <label for="tshirt">T-shirt</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="sweatshirt" name="sweatshirt" value="sweatshirt">
+                        <label for="sweatshirt">Sweat-shirt</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="sportswear" name="sportswear" value="sportswear">
+                        <label for="sportswear">Tenue de sport</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="accessories" name="accessories" value="accessories">
+                        <label for="accessories">Accessoires</label>
+                    </li>        
+                </ul>
             </div>
         </section>
     </main>
