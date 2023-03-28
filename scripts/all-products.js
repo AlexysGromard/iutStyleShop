@@ -2,6 +2,11 @@
 var path = window.location.pathname;
 // compter le nombre de /
 var count = (path.match(/\//g) || []).length - 1;
+// Si path comment par = "/iutStyleShop"
+if(path.startsWith('/iutStyleShop')){
+    // Retirer 1 au nombre de /
+    count--;
+}
 var retour = '../';
 
 // Récupérer 2 inputs de type range
