@@ -192,5 +192,29 @@ ajouterArticle = function(){
             shoopingCard.push(article);
         }
     }
+    // Sauvegarder dans le JSON
+    localStorage.setItem('../products/shopping-card.json', JSON.stringify(shoopingCard));
 }
+
+// FILTER IN SMARTPHONE
+// Si #filter-section-title:after est cliqué
+priceSlider = document.getElementById('price-slider');
+typeCheckbox = document.getElementById('type-checkbox'); 
+colorCheckbox = document.getElementById('color-checkbox');
+
+// Quand on clique sur filter-section-title:after
+filterSectionTitle = document.getElementById('filter-section-title');
+
+filterSectionTitle.addEventListener('click', function(){
+    // Mettre les ID à display: none
+    if(priceSlider.style.display == 'none'){
+        priceSlider.style.display = 'block';
+        typeCheckbox.style.display = 'block';
+        colorCheckbox.style.display = 'block';
+    } else {
+        priceSlider.style.display = 'none';
+        typeCheckbox.style.display = 'none';
+        colorCheckbox.style.display = 'none';    
+    }
+});
 

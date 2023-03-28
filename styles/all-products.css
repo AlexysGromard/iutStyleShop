@@ -64,12 +64,16 @@ main{
     font-size: var(--big);
     font-weight: 500;
     margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .filter-title{
     text-transform: uppercase;
     color: var(--dark-grey);
     font-size: var(--medium);
     margin-bottom: 11px;
+    display: block;
 }
 
 .range_container {
@@ -225,3 +229,36 @@ input#white{
 input#black{
     background-color: #000000;
 }
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    /* Main */
+    main{
+        flex-direction: column-reverse;
+        margin: 39px auto 107px auto;
+        padding: 0 25px;
+        max-width: 1124px;
+        gap: 0;
+    }
+    #filter-section{
+        max-width: none;
+    }
+    #products-section{
+        justify-content: center;
+    }
+
+    #filter-section-title::after{
+        content: "";
+        display: inline-flex;
+        width: 30px;
+        height: 30px;
+        background-image: url("../assets/icons/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        /* Background image z index 2 */
+        background-color: var(--red);
+        border-radius: 50%;
+    }
+}
+
