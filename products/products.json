@@ -1,31 +1,35 @@
 {
     "articles": [
       {
-        "nom": "Article 1",
+        "nom": "T-Shirt Rouge IUT",
+        "category" : "tshirt",
         "description": "Description de l'article 1",
-        "nomDeDossier": "article1",
-        "prix": 10.99,
-        "images": ["image1.jpg", "image2.jpg"],
+        "nomDeDossier": "tshirt-iut-rouge",
+        "prix": 19.99,
+        "couleur": "red",
+        "images": ["image1.png"],
         "note": 4.5,
         "disponibilite": true
-      },
-      {
-        "nom": "Article 2",
-        "description": "Description de l'article 2",
-        "nomDeDossier": "article2",
-        "prix": 24.99,
-        "images": ["image3.jpg", "image4.jpg"],
-        "note": 3,
-        "disponibilite": false
-      },
-      {
-        "nom": "Article 3",
-        "description": "Description de l'article 3",
-        "nomDeDossier": "article3",
-        "prix": 15.50,
-        "images": ["image5.jpg"],
-        "note": 5,
+      },{
+        "nom": "Sweat Rouge IUT",
+        "category" : "sweatshirt",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "sweatshirt-iut-rouge",
+        "prix": 39.99,
+        "couleur": "red",
+        "images": ["image1.png"],
+        "note": 4.5,
         "disponibilite": true
-        }
+      },{
+        "nom": "MUG Blanc IUT",
+        "category" : "accessories",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "mug-iut",
+        "prix": 14.99,
+        "couleur": "white",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      }
     ]
 }

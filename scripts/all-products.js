@@ -32,3 +32,115 @@ function putGoodValues(){
         fromSlider.value = toValue;
     }
 }
+
+
+// FILTRES
+// Récupérer les filtres
+// Min prince = fromSlider
+// Max price = toSlider
+
+
+// Si quelque chose change dans #filter-section 
+// (un filtre est coché ou décoché)
+window.onload = function(){
+    filter();
+}
+document.getElementById('filter-section').onchange = function(){
+    filter();
+}
+
+function filter(){
+    minPrice = fromSlider.value;
+    maxPrice = toSlider.value;
+    // Récupérer les catégories (type checkbox)
+    tshirt = document.getElementById('tshirt').checked;
+    sweatshirt = document.getElementById('sweatshirt').checked;
+    sportswear = document.getElementById('sportswear').checked;
+    accessories = document.getElementById('accessories').checked;
+    // Récupérer les couleurs (type checkbox)
+    red = document.getElementById('red').checked;
+    green = document.getElementById('green').checked;
+    blue = document.getElementById('blue').checked;
+    white = document.getElementById('white').checked;
+    black = document.getElementById('black').checked;
+    // Nb articles
+    nbArticles = document.getElementById('nb-articles');
+    // Mettre les produits dans la page
+    addProductBox();
+}
+
+function checkColor(product){
+    if(product.couleur == 'red' && red){
+        return true;
+    }
+    else if(product.couleur == 'green' && green){
+        return true;
+    }
+    else if(product.couleur == 'blue' && blue){
+        return true;
+    }
+    else if(product.couleur == 'white' && white){
+        return true;
+    }
+    else if(product.couleur == 'black' && black){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+// Ajouter box produit dans la page
+function addProductBox(){
+    // Récupérer la div qui contient tous les produits
+    product = '<div class="boite_article"> <img class="image" src="../assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="../assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text" href="#">Ajouter au panier</a></div></div></div>'
+    // Lire le fichier JSON
+    var requestURL = '../products/products.json';
+    // Supprimer tous les produits de la page
+    document.getElementById('products-section').innerHTML = '';
+    // Récypérer les articles qui correspondent aux filtres
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        var products = request.response.articles;
+        var productsFiltered = [];
+        for(var i = 0; i < products.length; i++){
+            // Si le prix est dans l'intervalle
+            if(products[i].prix >= minPrice && products[i].prix <= maxPrice){
+                // Si la catégorie est cochée
+                if(products[i].category == 'tshirt' && tshirt){
+                    if (checkColor(products[i])){
+                        productsFiltered.push(products[i]);
+                    }
+                }
+                else if(products[i].category == 'sweatshirt' && sweatshirt){
+                    if (checkColor(products[i])){
+                        productsFiltered.push(products[i]);
+                    }                }
+                else if(products[i].category == 'sportswear' && sportswear){
+                    if (checkColor(products[i])){
+                        productsFiltered.push(products[i]);
+                    }                }
+                else if(products[i].category == 'accessories' && accessories){
+                    if (checkColor(products[i])){
+                        productsFiltered.push(products[i]);
+                    }
+                }
+            }
+        }
+        // Ajouter produit dans la page dans #products-section
+        for(var i = 0; i < productsFiltered.length; i++){
+            pushProduct = product;
+            // Changer lee nom
+            pushProduct = pushProduct.replace('Lorem ipsum', productsFiltered[i].nom);
+            // Changer le prix 
+            pushProduct = pushProduct.replace('0,00€', productsFiltered[i].prix + '€');
+            // Changer l'image
+            pushProduct = pushProduct.replace('../assets/articles/claquettes/claquettes.png', "../products/" + productsFiltered[i].nomDeDossier + "/" + productsFiltered[i].images[0]);
+            document.getElementById('products-section').innerHTML += pushProduct;
+        }
+        nbArticles.innerHTML = productsFiltered.length + ' articles';
+    }
+}
