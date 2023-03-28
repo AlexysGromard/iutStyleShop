@@ -93,7 +93,7 @@ function checkColor(product){
 // Ajouter box produit dans la page
 function addProductBox(){
     // Récupérer la div qui contient tous les produits
-    product = '<div class="boite_article"> <img class="image" src="../assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="../assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text" href="#">Ajouter au panier</a></div></div></div>'
+    product = '<div id="" class="boite_article"> <img class="image" src="../assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="../assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
     // Lire le fichier JSON
     var requestURL = '../products/products.json';
     // Supprimer tous les produits de la page
@@ -139,8 +139,58 @@ function addProductBox(){
             pushProduct = pushProduct.replace('0,00€', productsFiltered[i].prix + '€');
             // Changer l'image
             pushProduct = pushProduct.replace('../assets/articles/claquettes/claquettes.png', "../products/" + productsFiltered[i].nomDeDossier + "/" + productsFiltered[i].images[0]);
+            // Ajouter l'ID : nomDeDossier
+            pushProduct = pushProduct.replace('id=""', 'id="' + productsFiltered[i].nomDeDossier + '"');
             document.getElementById('products-section').innerHTML += pushProduct;
         }
         nbArticles.innerHTML = productsFiltered.length + ' articles';
+        chargerProduits();
     }
 }
+
+// PANNIER
+// Récupérer fichier JSON 
+shoopingCard = JSON.parse(localStorage.getItem('../products/shopping-card.json'));
+// Créer variable des articles present
+var productBox = [];
+
+// Récupérer les éléments sur la page de type .boite_article
+function chargerProduits(){
+    productBox = document.getElementsByClassName('boite_article');
+    // Ajouter un event listener sur chaque boite_article
+    for(var i = 0; i < productBox.length; i++){
+        productBox[i].addEventListener('click', ajouterArticle);
+    }
+}
+
+ajouterArticle = function(){
+    // Ajouter l'article au panier
+    // Créer objet article
+    var article = {
+        nom: this.getElementsByClassName('medium-important-text')[0].innerHTML,
+        prix: this.getElementsByClassName('price')[0].innerHTML,
+        image: this.getElementsByClassName('image')[0].src,
+        quantite: 1
+    }
+    // Ecrire dans le fichier JSON
+    // Si le panier est vide
+    if(shoopingCard == null){
+        shoopingCard = [];
+        shoopingCard.push(article);
+    }
+    else{
+        // Si l'article est déjà présent
+        var present = false;
+        for(var i = 0; i < shoopingCard.length; i++){
+            if(shoopingCard[i].nom == article.nom){
+                shoopingCard[i].quantite++;
+                present = true;
+            }
+        }
+        // Si l'article n'est pas présent
+        if(!present){
+            shoopingCard.push(article);
+        }
+    }
+}
+
