@@ -1,3 +1,9 @@
+// Récupérer la position de la page dans arborecence
+var path = window.location.pathname;
+// compter le nombre de /
+var count = (path.match(/\//g) || []).length - 1;
+var retour = '../';
+
 // Récupérer 2 inputs de type range
 const fromSlider = document.getElementById('fromSlider');
 const toSlider = document.getElementById('toSlider');
@@ -53,10 +59,40 @@ function filter(){
     minPrice = fromSlider.value;
     maxPrice = toSlider.value;
     // Récupérer les catégories (type checkbox)
-    tshirt = document.getElementById('tshirt').checked;
-    sweatshirt = document.getElementById('sweatshirt').checked;
-    sportswear = document.getElementById('sportswear').checked;
-    accessories = document.getElementById('accessories').checked;
+    // Si #product-type est disponible sur la page
+    if(document.getElementById('product-type')){
+        tshirt = document.getElementById('tshirt').checked;
+        sweatshirt = document.getElementById('sweatshirt').checked;
+        sportswear = document.getElementById('sportswear').checked;
+        accessories = document.getElementById('accessories').checked;    
+    } else {
+        // Récupérer text de .section-title-name
+        var titleCategory = document.getElementsByClassName('section-title-name')[0].innerHTML;
+        // Si la catégorie est T-shirt
+        if(titleCategory == 'T-Shirt'){
+            tshirt = true;
+            sweatshirt = false;
+            sportswear = false;
+            accessories = false;
+        } else if(titleCategory == 'Sweat-shirts'){
+            tshirt = false;
+            sweatshirt = true;
+            sportswear = false;
+            accessories = false;
+        }
+        else if(titleCategory == 'Tenue de sport'){
+            tshirt = false;
+            sweatshirt = false;
+            sportswear = true;
+            accessories = false;
+        }
+        else if(titleCategory == 'Accessoires'){
+            tshirt = false;
+            sweatshirt = false;
+            sportswear = false;
+            accessories = true;
+        }
+    }
     // Récupérer les couleurs (type checkbox)
     red = document.getElementById('red').checked;
     green = document.getElementById('green').checked;
@@ -93,9 +129,10 @@ function checkColor(product){
 // Ajouter box produit dans la page
 function addProductBox(){
     // Récupérer la div qui contient tous les produits
-    product = '<div id="" class="boite_article"> <img class="image" src="../assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="../assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
+    product = '<div id="" class="boite_article"> <img class="image" src="' +retour.repeat(count) +'assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
     // Lire le fichier JSON
-    var requestURL = '../products/products.json';
+    var requestURL = retour.repeat(count)+'products/products.json';
+    console.log(requestURL);
     // Supprimer tous les produits de la page
     document.getElementById('products-section').innerHTML = '';
     // Récypérer les articles qui correspondent aux filtres
@@ -138,7 +175,7 @@ function addProductBox(){
             // Changer le prix 
             pushProduct = pushProduct.replace('0,00€', productsFiltered[i].prix + '€');
             // Changer l'image
-            pushProduct = pushProduct.replace('../assets/articles/claquettes/claquettes.png', "../products/" + productsFiltered[i].nomDeDossier + "/" + productsFiltered[i].images[0]);
+            pushProduct = pushProduct.replace(retour.repeat(count)+'assets/articles/claquettes/claquettes.png', retour.repeat(count)+"products/" + productsFiltered[i].nomDeDossier + "/" + productsFiltered[i].images[0]);
             // Ajouter l'ID : nomDeDossier
             pushProduct = pushProduct.replace('id=""', 'id="' + productsFiltered[i].nomDeDossier + '"');
             document.getElementById('products-section').innerHTML += pushProduct;
@@ -150,7 +187,7 @@ function addProductBox(){
 
 // PANNIER
 // Récupérer fichier JSON 
-shoopingCard = JSON.parse(localStorage.getItem('../products/shopping-card.json'));
+shoopingCard = JSON.parse(localStorage.getItem(retour.repeat(count)+'products/shopping-card.json'));
 // Créer variable des articles present
 var productBox = [];
 
@@ -193,7 +230,7 @@ ajouterArticle = function(){
         }
     }
     // Sauvegarder dans le JSON
-    localStorage.setItem('../products/shopping-card.json', JSON.stringify(shoopingCard));
+    localStorage.setItem(retour.repeat(count)+'products/shopping-card.json', JSON.stringify(shoopingCard));
 }
 
 // FILTER IN SMARTPHONE

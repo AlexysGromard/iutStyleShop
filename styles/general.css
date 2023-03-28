@@ -374,6 +374,8 @@ select:hover {
 .medium-important-text{
     font-size: var(--medium);
     font-weight: 500;
+    cursor: pointer;
+    width: max-content; 
 }
 
 .bas_article{
@@ -384,7 +386,6 @@ select:hover {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    cursor: pointer;
 }
 
 .stars{
