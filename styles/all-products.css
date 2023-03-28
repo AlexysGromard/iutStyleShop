@@ -181,7 +181,7 @@ main{
     border-radius: 14px;
 }
 #product-color label{
-  margin-left: 9px;
+  padding-left: 9px;
   font-size: var(--small);
   color: var(--dark-grey);
   cursor: pointer;
@@ -256,9 +256,9 @@ input#black{
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50%;
-        /* Background image z index 2 */
         background-color: var(--red);
         border-radius: 50%;
+        cursor: pointer;
     }
 }
 

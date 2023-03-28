@@ -197,6 +197,7 @@ header{
     margin-bottom: 7px;
     -webkit-user-select: none;
     user-select: none;
+    cursor: pointer;
 }
 
 /*Article_panier*/
@@ -383,6 +384,7 @@ select:hover {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    cursor: pointer;
 }
 
 .stars{
@@ -452,6 +454,7 @@ select:hover {
 .section-title-name{
     font-size: var(--big);
     font-weight: 500;
+    width: max-content;
 }
 .section-title-results{
     font-size: var(--small);
