@@ -137,7 +137,6 @@ function addProductBox(){
     product = '<div id="" class="boite_article"> <img class="image" src="' +retour.repeat(count) +'assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
     // Lire le fichier JSON
     var requestURL = retour.repeat(count)+'products/products.json';
-    console.log(requestURL);
     // Supprimer tous les produits de la page
     document.getElementById('products-section').innerHTML = '';
     // Récypérer les articles qui correspondent aux filtres
@@ -241,7 +240,9 @@ ajouterArticle = function(){
 // FILTER IN SMARTPHONE
 // Si #filter-section-title:after est cliqué
 priceSlider = document.getElementById('price-slider');
-typeCheckbox = document.getElementById('type-checkbox'); 
+if (document.getElementById('product-type')){
+    typeCheckbox = document.getElementById('type-checkbox'); 
+}
 colorCheckbox = document.getElementById('color-checkbox');
 
 // Quand on clique sur filter-section-title:after
@@ -251,12 +252,16 @@ filterSectionTitle.addEventListener('click', function(){
     // Mettre les ID à display: none
     if(priceSlider.style.display == 'none'){
         priceSlider.style.display = 'block';
-        typeCheckbox.style.display = 'block';
+        if (document.getElementById('product-type')){
+            typeCheckbox.style.display = 'block';
+        }
         colorCheckbox.style.display = 'block';
     } else {
         priceSlider.style.display = 'none';
-        typeCheckbox.style.display = 'none';
-        colorCheckbox.style.display = 'none';    
+        if (document.getElementById('product-type')){
+            typeCheckbox.style.display = 'none';
+        }
+        colorCheckbox.style.display = 'none';
     }
 });
 
