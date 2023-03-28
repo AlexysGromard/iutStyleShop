@@ -5,6 +5,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     gap: 54px;
+    height: 56.3vh;
 }
 
 /* sort-order (Select/otpion) */
