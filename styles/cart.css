@@ -1,0 +1,25 @@
+.sections-panier{
+    display: flex;
+    padding-top: 45px;
+    padding-left: 77px;
+    flex-direction: column;
+}
+
+.box-cart{
+    display: flex;
+    gap: 38px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.all-articles{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.title-informations-cart{
+    padding-left: 555px;
+    display: flex;
+    flex-direction: row;
+}
