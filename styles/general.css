@@ -151,6 +151,7 @@ header{
     display: flex;
     padding: 0 16px;
     width: 100%;
+    min-width: max-content;
     height: 33px;
     background-color: var(--red);
     border-radius:16.5px;
