@@ -198,6 +198,7 @@ header{
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
+    object-fit: contain;
 }
 
 /*Article_panier*/
