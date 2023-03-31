@@ -1,0 +1,155 @@
+{
+    "articles": [
+      {
+        "nom": "T-Shirt Rouge IUT",
+        "category" : "tshirt",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "tshirt_iut_rouge",
+        "prix": 19.99,
+        "couleur": "red",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Sweat Rouge IUT",
+        "category" : "sweatshirt",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "sweatshirt_iut_rouge",
+        "prix": 39.99,
+        "couleur": "red",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "MUG Blanc IUT",
+        "category" : "accessories",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "mug_iut",
+        "prix": 14.99,
+        "couleur": "white",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Casquette Noire IUT",
+        "category" : "accessories",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "casquette_noire_iut",
+        "prix": 16.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Gourde IUT Blanc",
+        "category" : "accessories",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "gourde_iut",
+        "prix": 12.99,
+        "couleur": "white",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Maillot IUT Nike",
+        "category" : "sportswear",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "maillot_iut_nike_noir",
+        "prix": 34.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Maillot blanc IUT pour femme",
+        "category" : "sportswear",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "maillot_iut_femme_blanc",
+        "prix": 22.99,
+        "couleur": "white",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Maillot noir IUT pour femme",
+        "category" : "sportswear",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "maillot_iut_femme_noir",
+        "prix": 22.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Maillot blanc IUT pour homme",
+        "category" : "sportswear",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "maillot_iut_homme_blanc",
+        "prix": 22.99,
+        "couleur": "white",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Maillot noir IUT pour homme",
+        "category" : "sportswear",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "maillot_iut_homme_noir",
+        "prix": 22.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Sac de sport IUT noir",
+        "category" : "accessories",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "sac_de_sport_iut_noir",
+        "prix": 25.75,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Stylo IUT rouge",
+        "category" : "accessories",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "stylo_iut_rouge",
+        "prix": 3.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Sweatshirt IUT noir",
+        "category" : "sweatshirt",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "sweatshirt_iut_noir",
+        "prix": 39.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "Sweatshirt IUT vert",
+        "category" : "sweatshirt",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "sweatshirt_iut_vert",
+        "prix": 39.99,
+        "couleur": "green",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      },{
+        "nom": "T-Shirt IUT blanc",
+        "category" : "tshirt",
+        "description": "Description de l'article 1",
+        "nomDeDossier": "tshirt_iut_blanc",
+        "prix": 19.99,
+        "couleur": "black",
+        "images": ["image1.png"],
+        "note": 4.5,
+        "disponibilite": true
+      }
+    ]
+}

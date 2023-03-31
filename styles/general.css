@@ -189,6 +189,7 @@ header{
     display: flex;
     padding: 0 16px;
     width: 100%;
+    min-width: max-content;
     height: 33px;
     background-color: var(--red);
     border-radius:16.5px;
@@ -319,6 +320,10 @@ header{
 }
 
 .cross{
+    margin: 0 25px 0 auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     padding: 5px;
 }
 .cross:hover{
@@ -408,6 +413,8 @@ header{
 .medium-important-text{
     font-size: var(--medium);
     font-weight: 500;
+    cursor: pointer;
+    width: max-content; 
 }
 
 .bas_article{
@@ -491,6 +498,7 @@ header{
 .section-title-name{
     font-size: var(--big);
     font-weight: 500;
+    width: max-content;
 }
 .section-title-results{
     font-size: var(--small);
