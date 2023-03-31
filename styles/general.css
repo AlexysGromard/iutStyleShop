@@ -160,6 +160,28 @@ header{
     line-height: 19px;
 }
 
+.payment-title-text{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.payment-schearch-text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.payment-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.41px;
+}
+
+.text-weight-price{
+    font-weight: 500;
+}
+
 .button{
     display: flex;
     padding: 0 16px;
@@ -209,6 +231,8 @@ header{
     margin-bottom: 7px;
     -webkit-user-select: none;
     user-select: none;
+    cursor: pointer;
+    object-fit: contain;
 }
 
 /*Article_panier*/
@@ -230,14 +254,20 @@ header{
     justify-content: flex-start;
 }
 
+.informations-article{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 17% 18% 6.5%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .dispo_rect_article{
-    padding-top: 25px;
     padding-left: 25px;
+    padding-top: 25px;
     padding-bottom: 38px;
-    padding-right: 221px;
     display: flex;
     flex-direction: column;
-    gap:4px;
 }
 
 .clickable{
@@ -249,7 +279,7 @@ header{
     max-width: 49px;
 }
 
-select {
+.quantity-size {
     position : relative;
     appearance: none;
     background-color: transparent;
@@ -262,25 +292,20 @@ select {
     -moz-appearance: none;
     height: 21px;
     width: 100%;
-    padding-left: 12px;
-    padding-right: 8px;
-    padding-top: 2px;
-    padding-bottom: 3px;
+    padding: 2px 8px 3px 12px;
     border: 1px solid var(--dark-grey);
     border-radius: 10.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: var(--dark-grey);
     outline: none;
+    transition: 0.2s border;
 }
 
 
-select:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+.quantity-size:hover {
+    border: 1px solid var(--red);
 }
 
 .price2{
@@ -288,18 +313,13 @@ select:hover {
     font-size: 22px;
     line-height: 26px;
     color: var(--dark-grey);
-    padding-left: 74px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .cross{
-    padding-left: 74px;
-    padding-right: 25px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
+    padding: 5px;
+}
+.cross:hover{
+    filter: invert(15%) sepia(100%) saturate(4162%) hue-rotate(347deg) brightness(114%) contrast(87%);
 }
 /*-------------------------------------------------------------*/
 
@@ -423,6 +443,10 @@ select:hover {
 
 .green{
     color: var(--green);
+}
+
+.grey{
+    color:var(--grey)
 }
 
 .dark-grey{
