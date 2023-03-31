@@ -153,31 +153,31 @@ header{
 
 .produits-type-text{
     font-weight: 600;
-    font-size: 22px;
+    font-size: var(--big);
     line-height: 26px;
 }
 
 .produits-type-small-text{
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--medium);
     line-height: 19px;
 }
 
 .payment-title-text{
     font-weight: 600;
-    font-size: 16px;
+    font-size: var(--medium);
     line-height: 19px;
 }
 
 .payment-schearch-text{
     font-weight: 400;
-    font-size: 12px;
+    font-size: var(--very-small);
     line-height: 14px;
 }
 
 .payment-text{
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--small);
     line-height: 16.41px;
 }
 
@@ -299,7 +299,7 @@ header{
     border: 1px solid var(--dark-grey);
     border-radius: 10.5px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--small);
     line-height: 16px;
     color: var(--dark-grey);
     outline: none;
@@ -313,7 +313,7 @@ header{
 
 .price2{
     font-weight: 600;
-    font-size: 22px;
+    font-size: var(--big);
     line-height: 26px;
     color: var(--dark-grey);
 }
@@ -375,7 +375,7 @@ header{
 
     font-family: 'Roboto';
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--small);
 }
 
 .header-down div a img{
