@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - IutStyleShop</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a class="link-to-home" href="../"><img src="../assets/images/Header-Image/logo.svg" alt="Image logo"></a>
+            <label class="search-bar" for="search"><!-- Search bar -->
+                <div>
+                    <img alt="Image of loupe" src="../assets/images/loupe.svg" class="image-loupe">
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
+            </label>
+            <div>
+                <button class="navigation-link-header">
+                    <div>
+                        <span class="navigation-link-header-title">Connexion</span>
+                        <span class="navigation-link-header-desc">Inscription</span>
+                    </div>
+                    <img alt="Image of user" src="../assets/images/user.svg">
+                </button>
+                <a class="navigation-link-header" href="cart.html">
+                    <div id="shopping-cart-text">
+                        <span class="navigation-link-header-title">Pannier</span>
+                        <span class="navigation-link-header-desc">0 articles</span>
+                    </div>
+                    <img alt="Image of shopping cart" src="../assets/images/Header-Image/panier.svg">
+                </a>
+            </div>
+        </div>
+        <div class="header-down">
+            <div class="header-down-link">
+                <a href="../all-products/">
+                    <img src="../assets/images/Header-Image/grid.svg" alt="grid">
+                    <span>Tous les produits</span>
+                </a>
+                <img src="../assets/images/Header-Image/line.svg" alt="horizontal-line" class="horizontal-line">
+                <a href="../all-products/t-shirt/">
+                    <img src="../assets/images/Header-Image/t-shirt.svg" alt="t-shirt">
+                    <span>T-Shirt</span>
+                </a>
+                <a href="../all-products/sweatshirt/">
+                    <img src="../assets/images/Header-Image/sweatshirt.svg" alt="sweatshirt">
+                    <span>Sweat-shirt </span>
+                </a>
+                <a href="../all-products/sportswear/">
+                    <img src="../assets/images/Header-Image/jogger-pants.svg" alt="jogger-pants">
+                    <span>Tenue de sport</span>
+                </a>
+                <a href="../all-products/accessories/">
+                    <img src="../assets/images/Header-Image/accessories.svg" alt="accessories">
+                    <span>Accessoire</span>
+                </a>
+            </div>
+            <a class="small-size button basic-text" href="#">Promotions</a>
+        </div>
+    </header>
+    <!-- Section -->
+    <section class="sections-panier">
+            <!-- Section title -->
+            <div class="section-title">
+                <span class="section-title-name">Meilleures ventes</span>
+                <span class="section-title-results">3 articles</span>
+            </div>
+            <div class="articles-payment-box">
+            <div class="all-articles big-size">
+                <div class="title-informations-cart">
+                    <div></div>
+                    <div class="produits-type-small-text">Quantité</div>
+                    <div class="produits-type-small-text">Sous-total</div>
+                    <img src="../assets/icons/poubelle-de-recyclage.png">
+                </div>
+    
+                <div class="article_rectangle big-size">
+                    <div class="image_article_panier small-size"></div>
+                    <div class="informations-article">
+                        <div class="dispo_rect_article">
+                            <div class="medium-important-text">Lorem ipsum dolor sit amet</div>
+                            <div class="availablity">
+                                <div class="small-text">Disponibilité :</div>
+                                <div class="small-text green">En stock</div>
+                            </div>
+                            <div class="small-text">Taille : S</div>
+                        </div>
+                        <div>
+                            <select class="quantity-size clickable">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                            </select>
+                        </div>
+                        <div class="price2">25,99€</div>
+                        <div><img src="../assets/icons/cross.svg" class="cross clickable"></div>
+                    </div>
+                </div>
+    
+                <div class="article_rectangle big-size">
+                    <div class="image_article_panier small-size"></div>
+                    <div class="informations-article">
+                        <div class="dispo_rect_article">
+                            <div class="medium-important-text">Lorem ipsum dolor sit amet</div>
+                            <div class="availablity">
+                                <div class="small-text">Disponibilité :</div>
+                                <div class="small-text green">En stock</div>
+                            </div>
+                            <div class="small-text">Taille : S</div>
+                        </div>
+                        <div>
+                            <select class="quantity-size clickable">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                            </select>
+                        </div>
+                        <div class="price2">25,99€</div>
+                        <div><img src="../assets/icons/cross.svg" class="cross clickable"></div>
+                    </div>
+                </div>
+
+                <div class="article_rectangle big-size">
+                    <div class="image_article_panier small-size"></div>
+                    <div class="informations-article">
+                        <div class="dispo_rect_article">
+                            <div class="medium-important-text">Lorem ipsum dolor sit amet</div>
+                            <div class="availablity">
+                                <div class="small-text">Disponibilité :</div>
+                                <div class="small-text green">En stock</div>
+                            </div>
+                            <div class="small-text">Taille : S</div>
+                        </div>
+                        <div>
+                            <select class="quantity-size clickable">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                            </select>
+                        </div>
+                        <div class="price2">25,99€</div>
+                        <div><img src="../assets/icons/cross.svg" class="cross clickable"></div>
+                    </div>
+                </div>
+    
+    
+            </div> 
+            <div class="payment payment-size">
+                <div class="first-section-payment">
+                    <div class="payment-title-text">Montant total de vos produits</div>
+                    <div class="payment-text dark-grey">Prix TTC</div>
+                </div>
+                <div class="line"></div>
+                <div class="second-section-payment">
+                    <div class="text-espace"><div class="payment-text grey">Sous-total</div><div class="payment-text text-weight-price">0,00€</div></div>
+                    <div class="text-espace"><div class="payment-text grey">Taxes</div><div class="payment-text text-weight-price">0,00€</div></div>
+                    <div class="text-espace"><div class="payment-text grey">Code promotionnel</div><div class="payment-text text-weight-price">0,00€</div></div>
+                </div>
+                <div class="line"></div>
+                <div class="third-section-payment">
+                    <div class="payment-text">Code promo</div>
+                    <div class="boite-code-promo">
+                        <input class="code-promo" type="text" name="code" placeholder="Renseigner votre code ici">
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="final-section-payment">
+                    <div class="text-espace">
+                        <div>
+                            <div class="payment-text">Prix total</div>
+                            <div class="payment-scearch-text">Ce prix inclus les remises</div>
+                        </div>
+                        <div class="price">0,00€</div>
+                    </div>
+                </div>
+                <a class="payment-size button important-text" href="#">Passer la commande</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <img id="footer-logo" src="../assets/icons/logo.svg" alt="IUTStyleShop logo">
+        <!-- Sitemap -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Plan du site</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="../">Accueil</a></li>
+                    <li><a href="../all-products/">Tous les articles</a></li>
+                    <li><a href="t-shirt/">T-Shirt</a></li>
+                    <li><a href="sweatshirt/">Sweat-shirt</a></li>
+                </ul>
+                <ul>
+                    <li><a href="sportswear/">Tenue de sport</a></li>
+                    <li><a href="accessories/">Accessoires</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Credit -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Crédits</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Crédits et aspects légaux</a></li>
+                    <li><a href="#">Créateurs</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Payment methods -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Moyens de paiement</h3>
+            <div class="footer-box">
+                <div id="payment-methods-images">
+                    <img src="../assets/icons/visa.svg" alt="Visa logo">
+                    <img src="../assets/icons/mastercard.svg" alt="Mastercard logo">
+                    <img src="../assets/icons/card.svg" alt="CB logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="../scripts/all-products.js"></script>

@@ -1,0 +1,151 @@
+/* General */
+
+.sections-panier{
+    display: flex;
+    flex-direction: column;
+    margin: 45px auto 45px auto;
+    min-height: 65.7vh;
+    max-width: 1434px;
+    padding: 0 77px;
+}
+
+.box-cart{
+    display: flex;
+    gap: 38px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.articles-payment-box{
+    display: flex;
+    align-items: end;
+    gap : 38px;
+    justify-content: space-between;
+}
+
+
+
+.all-articles{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.title-informations-cart{
+    display: grid;
+    grid-template-columns: 64% 14% 17% 1fr;
+}
+
+.payment-size{
+    max-width: 381px;
+}
+
+.payment{
+    background-color: white;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    border: 1px solid var(--background);
+}
+
+.first-section-payment{
+    padding: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.second-section-payment{
+    padding: 17px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.third-section-payment{
+    padding : 13px 0 16px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.boite-code-promo{
+    display: flex;
+    width: 100%;
+    border-radius:18px;
+    background-color: #F1F3F4;
+}
+
+.code-promo{
+    font-family: 'Roboto';
+    display: flex;
+    font-size: var(--very-small);
+    line-height: 14.06px;
+    font-weight: 400;
+    padding: 11px 20px 11px;
+
+    width: 100%;
+
+    border: none;
+    background: none;
+    outline:  none;
+}
+
+.text-espace{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.final-section-payment{
+    display: flex;
+    flex-direction: column;
+    padding: 13px 0 30px 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 1100px) {
+    .sections-panier{
+        margin: 39px auto 107px auto;
+        padding: 0 25px;
+    }
+    .articles-payment-box{
+        flex-direction: column;
+    }
+    .payment-size{
+        max-width: none;
+    }
+    .big-size{
+        max-width: none;
+    }
+    .produits-type-small-text{
+        font-size: var(--very-small);
+    }
+    .medium-important-text{
+        font-size: var(--small);
+    }
+    .article_rectangle{
+        height: 100px;
+    }
+    .image_article_panier{
+        width: 117px;
+        height: 100px;
+    }
+    .dispo_rect_article{
+        padding-left: 15px;
+    }
+    .price2{
+        font-size: var(--medium);
+    }
+}

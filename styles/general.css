@@ -15,6 +15,9 @@ body{
     min-height: 100vh;
 }
 
+main{
+}
+
 /* Header */
 header{
     width: 100%;
@@ -147,6 +150,41 @@ header{
     color: var(--white);
     font-size: var(--small);
 }
+
+.produits-type-text{
+    font-weight: 600;
+    font-size: var(--big);
+    line-height: 26px;
+}
+
+.produits-type-small-text{
+    font-weight: 400;
+    font-size: var(--medium);
+    line-height: 19px;
+}
+
+.payment-title-text{
+    font-weight: 600;
+    font-size: var(--medium);
+    line-height: 19px;
+}
+
+.payment-schearch-text{
+    font-weight: 400;
+    font-size: var(--very-small);
+    line-height: 14px;
+}
+
+.payment-text{
+    font-weight: 400;
+    font-size: var(--small);
+    line-height: 16.41px;
+}
+
+.text-weight-price{
+    font-weight: 500;
+}
+
 .button{
     display: flex;
     padding: 0 16px;
@@ -220,14 +258,20 @@ header{
     justify-content: flex-start;
 }
 
+.informations-article{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 17% 18% 6.5%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .dispo_rect_article{
-    padding-top: 25px;
     padding-left: 25px;
+    padding-top: 25px;
     padding-bottom: 38px;
-    padding-right: 221px;
     display: flex;
     flex-direction: column;
-    gap:4px;
 }
 
 .clickable{
@@ -255,11 +299,8 @@ header{
     padding: 2px 8px 3px 12px;
     border: 1px solid var(--dark-grey);
     border-radius: 10.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--small);
     line-height: 16px;
     color: var(--dark-grey);
     outline: none;
@@ -273,13 +314,9 @@ header{
 
 .price2{
     font-weight: 600;
-    font-size: 22px;
+    font-size: var(--big);
     line-height: 26px;
     color: var(--dark-grey);
-    margin-left: 74px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .cross{
@@ -343,7 +380,7 @@ header{
 
     font-family: 'Roboto';
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--small);
 }
 
 .header-down div a img{
@@ -416,6 +453,10 @@ header{
 
 .green{
     color: var(--green);
+}
+
+.grey{
+    color:var(--grey)
 }
 
 .dark-grey{
