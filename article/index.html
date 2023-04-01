@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IUTStyleShope - Article</title>
+    <title>Article - IUTStyleShop</title>
     <link rel="stylesheet" href="../styles/variables.css">
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/homePage.css">
@@ -75,17 +75,14 @@
         <div class="article-page-left">
             <div class="article-image-box">
                 <img src="../assets/articles/claquettes/claquettes.png" alt="Article" class="article-image">
-                <div>
-                    <button><img src="../assets/articles/claquettes/claquettes.png" alt="Article2"></button>
-                    <button><img src="../assets/articles/claquettes/claquettes.png" alt="Article3"></button>
-                    <button><img src="../assets/articles/claquettes/claquettes.png" alt="Article4"></button>
-                    <button><img src="../assets/articles/claquettes/claquettes.png" alt="Article5"></button>
-                    <button><img src="../assets/articles/claquettes/claquettes.png" alt="Article6"></button>
+                <!-- All images of the product -->
+                <div id="product-images">
+                    <button class="product-images"><img src="../assets/articles/claquettes/claquettes.png" alt="Article2"></button>
                 </div>
             </div>
             <div class="acticle-info-box">
                 <div>
-                    <span class="acticle-name">Lorem ipsum dolor sit amet</span>
+                    <span class="acticle-name">Titre</span>
                     <div class="stars">
                         <img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg">
                         <img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg">
@@ -104,19 +101,18 @@
                     <div>
                         <span class="small-article-text">Taille:</span>
                         <select class="select-taille" name="taille" id="taille">
-                            <option value="XXS">XXS</option>
+                            <option selected disabled value="">Selectionner</option>
                             <option value="XS">XS</option>
-                            <option value="S" selected>S</option>
+                            <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
                             <option value="XL">XL</option>
-                            <option value="XXL">XXL</option>
-                            <option value="XXXL">XXXL</option>
                         </select>
                     </div>
-                    <span class="small-article-text article-description">de manifique claquettes neuve avec le logo de poytech <span>
+                    <span class="small-article-text article-description">Description</span>
+
+                    <a class="button basic-text" href="../card">Ajouter au panier</a>
                 </div>
-                
             </div>
         </div>
 
@@ -125,9 +121,6 @@
                 <span>Partager cet article</span>
                 <img src="../assets/images/partage.svg" alt="partager">
             </button>
-            
-            <a class="medium-size button basic-text" href="#">Ajouter au panier</a>
-
         </div>
     </main>
 
