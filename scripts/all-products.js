@@ -301,7 +301,9 @@ if(pageName == "Panier"){
     // Lire localStorage et mettre dans un tableau
     shoopingCard = [];
     for(var i = 0; i < localStorage.length; i++){
-        shoopingCard.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        if (localStorage.key(i) != "productOpen"){
+            shoopingCard.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        }
     }
 
     // Si le panier n'est pas vide
@@ -347,7 +349,13 @@ if(pageName == "Panier"){
 function drawPanier(){
     // Récupérer le nombre d'articles dans le panier
     var nombreArticles = document.getElementsByClassName('navigation-link-header-desc')[1];
-    nombreArticles.innerHTML = localStorage.length + " articles";
+    size = 0
+    for (var i = 0; i < localStorage.length; i++){
+        if (localStorage.key(i) != "productOpen"){
+            size += 1;
+        }
+    }
+    nombreArticles.innerHTML = size + " articles";
 }
 
 function drawPricePanier(){
@@ -355,8 +363,10 @@ function drawPricePanier(){
     var prixTotal = document.getElementsByClassName('price')[0];
     var total = 0;
     for(var i = 0; i < localStorage.length; i++){
-        total += parseFloat(JSON.parse(localStorage.getItem(localStorage.key(i))).prix) * parseInt(JSON.parse(localStorage.getItem(localStorage.key(i))).quantite);
-    }
+        if (localStorage.key(i) != "productOpen"){
+            total += parseFloat(JSON.parse(localStorage.getItem(localStorage.key(i))).prix) * parseInt(JSON.parse(localStorage.getItem(localStorage.key(i))).quantite);
+            }
+        }
     // Garder 2 chiffres après la virgule
     total = total.toFixed(2);
     prixTotal.innerHTML = total + "€";
@@ -375,7 +385,13 @@ function drawPricePanier(){
 function drawNbArticles(){
     // Récupérer le nombre d'articles dans le panier
     var nombreArticles = document.getElementsByClassName('section-title-results')[0];
-    nombreArticles.innerHTML = localStorage.length + " articles";
+    nbArticles = 0;
+    for(var i = 0; i < localStorage.length; i++){
+        if (localStorage.key(i) != "productOpen"){
+            nbArticles += parseInt(JSON.parse(localStorage.getItem(localStorage.key(i))).quantite);
+        }
+    }
+    nombreArticles.innerHTML = nbArticles + " articles";
 }
 
 // PAGE PRODUIT
@@ -436,7 +452,7 @@ if (pageName == 'Article'){
     // Récupérer les infos du produit dans le localStorage
     var product = JSON.parse(localStorage.getItem('productOpen'));
     // Supprimer cet élément du localStorage
-    localStorage.removeItem('productOpen');
+    // localStorage.removeItem('productOpen');
     // Remplacer les valeurs
     var article = document.getElementsByClassName('acticle-name')[0];
     article.innerHTML = article.innerHTML.replace('Titre', product.nom);
