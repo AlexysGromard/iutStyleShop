@@ -455,6 +455,19 @@ if (pageName == 'Article'){
         productImages.innerHTML += pushImage;
     }
 
+    // Si l'utilisateur clique sur une image, changer l'image active
+    var productImages = document.getElementsByClassName('product-images');
+    for(var i = 0; i < productImages.length; i++){
+        productImages[i].addEventListener('click', function(){
+            // Récupérer l'image
+            var image = this.children[0].src;
+            // Mettre l'image dans #active-image
+            var activeImage = document.getElementById('active-image');
+            activeImage.src = image;
+        });
+    }
+    
+
     // Quand #add-card est cliqué, ajouter l'article au panier
     var addCard = document.getElementById('add-card');
     addCard.addEventListener('click', function(){
