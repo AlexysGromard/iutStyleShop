@@ -97,7 +97,7 @@ function checkColor(product){
 // Ajouter box produit dans la page
 function addProductBox(){
     // Récupérer la div qui contient tous les produits
-    product = '<div id="" class="boite_article"> <img class="image" src="' +retour.repeat(count) +'assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text product-btn">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
+    product = '<div id="" class="boite_article"> <img class="image" src="' +retour.repeat(count) +'assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text product-btn">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text btn-add-card">Ajouter au panier</a></div></div></div>'
     // Lire le fichier JSON
     var requestURL = retour.repeat(count)+'products/products.json';
     // Supprimer tous les produits de la page
@@ -241,10 +241,12 @@ var productBox = [];
 
 // Récupérer les éléments sur la page de type .boite_article
 function chargerProduits(){
-    productBox = document.getElementsByClassName('boite_article');
+    // Récupérer le bouton ajouter au panier .btn-add-card
+    btn = document.getElementsByClassName('btn-add-card');
+    var ajouterAuPanier = document.getElementsByClassName('ajouter-au-panier');
     // Ajouter un event listener sur chaque boite_article
     for(var i = 0; i < productBox.length; i++){
-        productBox[i].addEventListener('click', ajouterArticle);
+        btn[i].addEventListener('click', ajouterArticle);
     }
 }
 
@@ -452,4 +454,25 @@ if (pageName == 'Article'){
         var pushImage = '<button class="product-images"><img src="'+ retour.repeat(count)+'/products/'+ product.nomDeDossier +'/'+ product.images[i] +'" alt="Article2"></button>';
         productImages.innerHTML += pushImage;
     }
+
+    // Quand #add-card est cliqué, ajouter l'article au panier
+    var addCard = document.getElementById('add-card');
+    addCard.addEventListener('click', function(){
+        // Récupérer la quantité
+        var nomImage = document.getElementById('active-image').src;
+        nomImage = nomImage.split('/');
+        nomImage = nomImage[nomImage.length - 1];
+        // Mettre l'article dans le localStorage
+        var productAdd = {
+            nom: product.nom,
+            description: product.description,
+            image: nomImage,
+            prix: product.prix,
+            nomDeDossier: product.nomDeDossier,
+            quantite: 1
+        };
+        localStorage.setItem(product.nomDeDossier, JSON.stringify(productAdd));
+        // Ouvrir la page panier
+        window.open(retour.repeat(count)+'card/', '_self');
+    });
 }
