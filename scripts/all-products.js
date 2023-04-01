@@ -374,3 +374,93 @@ function drawNbArticles(){
     var nombreArticles = document.getElementsByClassName('section-title-results')[0];
     nombreArticles.innerHTML = localStorage.length + " articles";
 }
+
+// PAGE PRODUIT
+function ajouterClickableSurProduit(){
+    var productBtn = document.getElementsByClassName('product-btn');
+    var productImage = document.getElementsByClassName('image');
+
+    for(var i = 0; i < productBtn.length; i++){
+        // Ajouter un event listener sur les titres des produits
+        productBtn[i].addEventListener('click', function(){
+            afficherPageProduit(this.parentElement.parentElement.id)
+        });
+        productImage[i].addEventListener('click', function(){
+            afficherPageProduit(this.parentElement.parentElement.id)
+        });
+    }
+}
+
+function afficherPageProduit(dos){  
+    // Cette fonction va récupérer les infos du produit et les afficher sur la page produit
+    // Les infos sont dans le JSON
+    // Récupérer le JSON
+    var requestURL = retour.repeat(count)+'products/products.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function(){
+        var products = request.response.articles;
+        // Récupérer le produit
+        for (var i = 0; i < products.length; i++){
+            if (products[i].nomDeDossier == dos){
+                // Récupérer les infos du produit
+                var nom = products[i].nom;
+                var description = products[i].description;
+                var images = products[i].images;
+                var prix = products[i].prix;
+                var nomDeDossier = products[i].nomDeDossier;
+                // Mettre les infos dans une mémoire tampon
+                var productOpen = {
+                    nom: nom,
+                    description: description,
+                    images: images,
+                    prix: prix,
+                    nomDeDossier: nomDeDossier
+                };
+                // Mettre la mémoire tampon dans le localStorage
+                localStorage.setItem('productOpen', JSON.stringify(productOpen));
+                // Ouvrir la page produit
+                window.open(retour.repeat(count)+'article/', '_self');
+            }
+        }
+    }
+}
+
+// PAGE PRODUIT (ouverte)
+if (pageName == 'Article'){
+    // Récupérer les infos du produit dans le localStorage
+    var product = JSON.parse(localStorage.getItem('productOpen'));
+    // Supprimer cet élément du localStorage
+    localStorage.removeItem('productOpen');
+    // Remplacer les valeurs
+    var article = document.getElementsByClassName('acticle-name')[0];
+    article.innerHTML = article.innerHTML.replace('Titre', product.nom);
+    var article = document.getElementsByClassName('article-description')[0];
+    article.innerHTML = article.innerHTML.replace('Description', product.description);
+    var article = document.getElementById('price');
+    article.innerHTML = article.innerHTML.replace('prix', product.prix + '€');
+    // Mettre l'image dans #active-image
+    var activeImage = document.getElementById('active-image');
+    // Aller chercher l'image dans le dossier
+    activeImage.src = retour.repeat(count)+'/products/'+ product.nomDeDossier +'/'+ product.images[0];
+    // Mettre les images dans #product-images :                     <button class="product-images"><img src="../assets/articles/claquettes/claquettes.png" alt="Article2"></button>
+    var productImages = document.getElementById('product-images');
+    for(var i = 0; i < product.images.length; i++){
+        var pushImage = '<button class="product-images"><img src="'+ retour.repeat(count)+'/products/'+ product.nomDeDossier +'/'+ product.images[i] +'" alt="Article2"></button>';
+        productImages.innerHTML += pushImage;
+    }
+
+    // Si l'utilisateur clique sur une image, changer l'image active
+    var productImages = document.getElementsByClassName('product-images');
+    for(var i = 0; i < productImages.length; i++){
+        productImages[i].addEventListener('click', function(){
+            // Récupérer l'image
+            var image = this.children[0].src;
+            // Mettre l'image dans #active-image
+            var activeImage = document.getElementById('active-image');
+            activeImage.src = image;
+        });
+    }
+}

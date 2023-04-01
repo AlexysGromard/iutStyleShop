@@ -17,7 +17,7 @@
         "nomDeDossier": "sweatshirt_iut_rouge",
         "prix": 39.99,
         "couleur": "red",
-        "images": ["image1.png"],
+        "images": ["image1.png", "image2.png"],
         "note": 4.5,
         "disponibilite": true
       },{
