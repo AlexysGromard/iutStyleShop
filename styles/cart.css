@@ -18,7 +18,6 @@
 
 .articles-payment-box{
     display: flex;
-    align-items: end;
     gap : 38px;
     justify-content: space-between;
 }
