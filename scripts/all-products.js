@@ -294,6 +294,7 @@ ajouterArticle = function(){
 // PAGE PANIER
 if(pageName == "Panier"){
     drawPricePanier();
+    drawNbArticles();
     article = '<div class="article_rectangle big-size"><div class="image_article_panier small-size"></div><div class="informations-article"><div class="dispo_rect_article"><div class="medium-important-text">Lorem ipsum dolor sit amet</div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="small-text">Taille : S</div></div><div><select class="quantity-size clickable"><option>1</option><option>2</option><option>3</option></select></div><div class="price2">25,99€</div><div><img src="../assets/icons/cross.svg" class="cross clickable"></div></div></div>'
     // Lire localStorage et mettre dans un tableau
     shoopingCard = [];
@@ -336,6 +337,7 @@ if(pageName == "Panier"){
             this.parentElement.parentElement.parentElement.remove();
             drawPanier();
             drawPricePanier();
+            drawNbArticles();
         });
     }
 }
@@ -366,4 +368,10 @@ function drawPricePanier(){
     taxesnb = total * 0.2;
     taxesnb = taxesnb.toFixed(2);
     taxes.innerHTML = taxesnb + "€";
+}
+
+function drawNbArticles(){
+    // Récupérer le nombre d'articles dans le panier
+    var nombreArticles = document.getElementsByClassName('section-title-results')[0];
+    nombreArticles.innerHTML = localStorage.length + " articles";
 }
