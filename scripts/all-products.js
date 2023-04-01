@@ -97,7 +97,7 @@ function checkColor(product){
 // Ajouter box produit dans la page
 function addProductBox(){
     // Récupérer la div qui contient tous les produits
-    product = '<div id="" class="boite_article"> <img class="image" src="' +retour.repeat(count) +'assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
+    product = '<div id="" class="boite_article"> <img class="image" src="' +retour.repeat(count) +'assets/articles/claquettes/claquettes.png" alt="Claquettes"><div class="bas_article"><div class="medium-important-text product-btn">Lorem ipsum</div><div class="stars"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Jaune" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-preferee.svg"><img alt="Etoile Gris" src="'+retour.repeat(count)+'assets/icons/marquer-comme-star-pas-preferee.svg"></div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="price-btn"><div class="price">0,00€</div><a class="button medium-size basic-text">Ajouter au panier</a></div></div></div>'
     // Lire le fichier JSON
     var requestURL = retour.repeat(count)+'products/products.json';
     // Supprimer tous les produits de la page
@@ -149,6 +149,7 @@ function addProductBox(){
         }
         nbArticles.innerHTML = productsFiltered.length + ' articles';
         chargerProduits();
+        ajouterClickableSurProduit();
     }
 }
 
@@ -450,17 +451,5 @@ if (pageName == 'Article'){
     for(var i = 0; i < product.images.length; i++){
         var pushImage = '<button class="product-images"><img src="'+ retour.repeat(count)+'/products/'+ product.nomDeDossier +'/'+ product.images[i] +'" alt="Article2"></button>';
         productImages.innerHTML += pushImage;
-    }
-
-    // Si l'utilisateur clique sur une image, changer l'image active
-    var productImages = document.getElementsByClassName('product-images');
-    for(var i = 0; i < productImages.length; i++){
-        productImages[i].addEventListener('click', function(){
-            // Récupérer l'image
-            var image = this.children[0].src;
-            // Mettre l'image dans #active-image
-            var activeImage = document.getElementById('active-image');
-            activeImage.src = image;
-        });
     }
 }
