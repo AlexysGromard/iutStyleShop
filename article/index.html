@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - IUTStyleShop</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <link rel="stylesheet" href="../styles/article.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a class="link-to-home" href="../"><img src="../assets/images/Header-Image/logo.svg" alt="Image logo"></a>
+            <label class="search-bar" for="search"><!-- Search bar -->
+                <div>
+                    <img alt="Image of loupe" src="../assets/images/loupe.svg" class="image-loupe">
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
+            </label>
+            <div>
+                <button class="navigation-link-header">
+                    <div>
+                        <span class="navigation-link-header-title">Connexion</span>
+                        <span class="navigation-link-header-desc">Inscription</span>
+                    </div>
+                    <img alt="Image of user" src="../assets/images/user.svg">
+                </button>
+                <a class="navigation-link-header" href="../card/">
+                    <div id="shopping-cart-text">
+                        <span class="navigation-link-header-title">Panier</span>
+                        <span class="navigation-link-header-desc">0 articles</span>
+                    </div>
+                    <img alt="Image of shopping cart" src="../assets/images/Header-Image/panier.svg">
+                </a>
+            </div>
+        </div>
+        <div class="header-down">
+            <div class="header-down-link">
+                <a href="../all-products/">
+                    <img src="../assets/images/Header-Image/grid.svg" alt="grid">
+                    <span>Tous les produits</span>
+                </a>
+                <img src="../assets/images/Header-Image/line.svg" alt="horizontal-line" class="horizontal-line">
+                <a href="../all-products/t-shirt/">
+                    <img src="../assets/images/Header-Image/t-shirt.svg" alt="t-shirt">
+                    <span>T-Shirt</span>
+                </a>
+                <a href="../all-products/sweatshirt/">
+                    <img src="../assets/images/Header-Image/sweatshirt.svg" alt="sweatshirt">
+                    <span>Sweat-shirt </span>
+                </a>
+                <a href="../all-products/sportswear/">
+                    <img src="../assets/images/Header-Image/jogger-pants.svg" alt="jogger-pants">
+                    <span>Tenue de sport</span>
+                </a>
+                <a href="../all-products/accessories/">
+                    <img src="../assets/images/Header-Image/accessories.svg" alt="accessories">
+                    <span>Accessoire</span>
+                </a>
+            </div>
+            <a class="small-size button basic-text" href="#">Promotions</a>
+        </div>
+    </header>
+    <main class="article-parge">        
+        <div class="article-page-left">
+            <div class="article-image-box">
+                <img src="../assets/articles/claquettes/claquettes.png" alt="Article" class="article-image">
+                <!-- All images of the product -->
+                <div id="product-images">
+                    <button class="product-images"><img src="../assets/articles/claquettes/claquettes.png" alt="Article2"></button>
+                </div>
+            </div>
+            <div class="acticle-info-box">
+                <div>
+                    <span class="acticle-name">Titre</span>
+                    <div class="stars">
+                        <img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="../assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Gris" src="../assets/icons/marquer-comme-star-pas-preferee.svg">
+                    </div>
+                    <span class="small-article-text">186 évaluations</span>
+                </div>
+                <div class="article-more-info">
+                    <div>
+                        <span class="acticle-prices">25,99€</span>
+                        <span class="small-article-text">Tous les prix inclus la TVA.</span>
+                    </div>
+                    <span class="small-article-text">Votre article sera à récupérer sur votre campus.</span>
+                    <div>
+                        <span class="small-article-text">Taille:</span>
+                        <select class="select-taille" name="taille" id="taille">
+                            <option selected disabled value="">Selectionner</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <span class="small-article-text article-description">Description</span>
+
+                    <a class="button basic-text" href="../card">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-page-right">
+            <button>
+                <span>Partager cet article</span>
+                <img src="../assets/images/partage.svg" alt="partager">
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <img id="footer-logo" src="../assets/icons/logo.svg" alt="IUTStyleShop logo">
+        <!-- Sitemap -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Plan du site</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Tous les articles</a></li>
+                    <li><a href="#">T-Shirt</a></li>
+                    <li><a href="#">Sweat-shirt</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Tenue de sport</a></li>
+                    <li><a href="#">Accessoires</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Credit -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Crédits</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Crédits et aspects légaux</a></li>
+                    <li><a href="#">Créateurs</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Payment methods -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Moyens de paiement</h3>
+            <div class="footer-box">
+                <div id="payment-methods-images">
+                    <img src="../assets/icons/visa.svg" alt="Visa logo">
+                    <img src="../assets/icons/mastercard.svg" alt="Mastercard logo">
+                    <img src="../assets/icons/card.svg" alt="CB logo">    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
