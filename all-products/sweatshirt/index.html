@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweatshirt - IUTStyleShop</title>
+    <link rel="stylesheet" href="../../styles/variables.css">
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/all-products.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a class="link-to-home" href="../../"><img src="../../assets/images/Header-Image/logo.svg" alt="Image logo"></a>
+            <label class="search-bar" for="search"><!-- Search bar -->
+                <div>
+                    <img alt="Image of loupe" src="../../assets/images/loupe.svg" class="image-loupe">
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
+            </label>
+            <div>
+                <button class="navigation-link-header">
+                    <div>
+                        <span class="navigation-link-header-title">Connexion</span>
+                        <span class="navigation-link-header-desc">Inscription</span>
+                    </div>
+                    <img alt="Image of user" src="../../assets/images/user.svg">
+                </button>
+                <a class="navigation-link-header" href="../../card/">
+                    <div id="shopping-cart-text">
+                        <span class="navigation-link-header-title">Panier</span>
+                        <span class="navigation-link-header-desc">0 articles</span>
+                    </div>
+                    <img alt="Image of shopping cart" src="../../assets/images/Header-Image/panier.svg">
+                </a>
+            </div>
+        </div>
+        <div class="header-down">
+            <div class="header-down-link">
+                <a href="../">
+                    <img src="../../assets/images/Header-Image/grid.svg" alt="grid">
+                    <span>Tous les produits</span>
+                </a>
+                <img src="../../assets/images/Header-Image/line.svg" alt="horizontal-line" class="horizontal-line">
+                <a href="../t-shirt/">
+                    <img src="../../assets/images/Header-Image/t-shirt.svg" alt="t-shirt">
+                    <span>T-Shirt</span>
+                </a>
+                <a href="../sweatshirt/">
+                    <img src="../../assets/images/Header-Image/sweatshirt.svg" alt="sweatshirt">
+                    <span>Sweat-shirt </span>
+                </a>
+                <a href="../sportswear/">
+                    <img src="../../assets/images/Header-Image/jogger-pants.svg" alt="jogger-pants">
+                    <span>Tenue de sport</span>
+                </a>
+                <a href="../accessories/">
+                    <img src="../../assets/images/Header-Image/accessories.svg" alt="accessories">
+                    <span>Accessoire</span>
+                </a>
+            </div>
+            <a class="small-size button basic-text" href="#">Promotions</a>
+        </div>
+    </header>
+    <main>
+        <!-- Articles -->
+        <div id="articles-part">
+            <div id="header-products">
+                <!-- Section title -->
+                <div class="section-title">
+                    <span class="section-title-name">Sweat-shirts</span>
+                    <span id="nb-articles" class="section-title-results">0 articles</span>
+                </div>
+                <!-- Btn 'All products' -->
+                <select title="sort-order" id="sort-order">
+                    <option value="pertinance">Pertinance</option>
+                    <option value="ascending-price">Prix croissant</option>
+                    <option value="descending-price">Prix décroissant</option>
+                </select>
+            </div>
+            <!-- Section products -->
+            <section id="products-section">
+                <!-- ALL PRODUCTS -->
+            </section>    
+        </div>
+        <!-- Section filters -->
+        <section id="filter-section">
+            <span id="filter-section-title">Filter votre recherche</span>
+            <!-- Price Slider -->
+            <div class="filter-container" id="price-slider">
+                <span class="filter-title">prix</span>
+                <div class="range_container">
+                    <div class="sliders_control">
+                        <input id="fromSlider" type="range" value="0" min="0" max="100"/>
+                        <input id="toSlider" type="range" value="100" min="0" max="100"/>
+                        <div id="range-values">
+                            <span id="fromValue">0</span>
+                            <span id="toValue">100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product color -->
+            <div class="filter-container" id="color-checkbox">
+            <span class="filter-title">couleur</span>
+            <div class="range_container">
+                    <ul id="product-color">
+                        <li>
+                            <input checked checked type="checkbox" id="red" name="red" value="white">
+                            <label for="red">Rouge</label>
+                        </li>
+                        <li>
+                            <input checked type="checkbox" id="green" name="green" value="white">
+                            <label for="green">Vert</label>
+                        </li>
+                        <li>
+                            <input checked type="checkbox" id="blue" name="blue" value="blue">
+                            <label for="blue">Bleu</label>
+                        </li>
+                        <li>
+                            <input checked type="checkbox" id="white" name="white" value="white">
+                            <label for="white">Blanc</label>
+                        </li>
+                        <li>
+                            <input checked type="checkbox" id="black" name="black" value="black">
+                            <label for="black">Noir</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img id="footer-logo" src="../../assets/icons/logo.svg" alt="IUTStyleShop logo">
+        <!-- Sitemap -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Plan du site</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="../../">Accueil</a></li>
+                    <li><a href="../../all-products/">Tous les articles</a></li>
+                    <li><a href="../t-shirt/">T-Shirt</a></li>
+                    <li><a href="../sweatshirt/">Sweat-shirt</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../sportswear/">Tenue de sport</a></li>
+                    <li><a href="../accessories/">Accessoires</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Credit -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Crédits</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Crédits et aspects légaux</a></li>
+                    <li><a href="#">Créateurs</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Payment methods -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Moyens de paiement</h3>
+            <div class="footer-box">
+                <div id="payment-methods-images">
+                    <img src="../../assets/icons/visa.svg" alt="Visa logo">
+                    <img src="../../assets/icons/mastercard.svg" alt="Mastercard logo">
+                    <img src="../../assets/icons/card.svg" alt="CB logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../../scripts/all-products.js"></script>

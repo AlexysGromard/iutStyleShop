@@ -10,11 +10,9 @@
 </head>
 <body>
     <!-- This page is not show on the website -->
-
     <header>
         <div class="header-top">
             <a class="link-to-home" href="index.html"><img src="assets/images/Header-Image/logo.svg" alt="Image logo"></a>
-            
             <label class="search-bar" for="search"><!-- Search bar -->
                 <div>
                     <img alt="Image of loupe" src="assets/images/loupe.svg" class="image-loupe">
@@ -22,12 +20,11 @@
                 </div>
                 <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
             </label>
-
             <div>
                 <button class="navigation-link-header">
                     <div>
-                        <span class="main-text">Connexion</span>
-                        <span>Inscription</span>
+                        <span class="navigation-link-header-title">Connexion</span>
+                        <span class="navigation-link-header-desc">Inscription</span>
                     </div>
                     <img alt="Image of user" src="assets/images/user.svg">
                 </button>
@@ -35,11 +32,13 @@
                     <div>
                         <span class="main-text">Pannier</span>
                         <span>0 articles</span>
+                    <div id="shopping-cart-text">
+                        <span class="navigation-link-header-title">Pannier</span>
+                        <span class="navigation-link-header-desc">0 articles</span>
                     </div>
                     <img alt="Image of shopping cart" src="assets/images/Header-Image/panier.svg">
                 </a>
             </div>
-
         </div>
         <div class="header-down">
             <div class="header-down-link">
@@ -65,12 +64,8 @@
                     <span>Accessoire</span>
                 </a>
             </div>
-            
             <a class="small-size button basic-text" href="#">Promotions</a>
-            
         </div>
-            
-        
     </header>
         <!-- Search Button -->
         <div>Rechercher</div>
@@ -102,6 +97,29 @@
                 <div class="price">0,00€</div>
                 <a class="button medium-size basic-text" href="#">Ajouter au panier</a>
             </div>
+        </div>
+    </div>
+    <!--Article panier-->
+    <div class="article_rectangle big-size">
+        <div class="image_article_panier small-size"></div>
+        <div class="informations-article">
+            <div class="dispo_rect_article">
+                <div class="medium-important-text">Lorem ipsum dolor sit amet</div>
+                <div class="availablity">
+                    <div class="small-text">Disponibilité :</div>
+                    <div class="small-text green">En stock</div>
+                </div>
+                <div class="small-text">Taille : S</div>
+            </div>
+            <div>
+                <select class="quantity-size clickable">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                </select>
+            </div>
+            <div class="price2">25,99€</div>
+            <div><img src="../assets/icons/cross.svg" class="cross clickable"></div>
         </div>
     </div>
 

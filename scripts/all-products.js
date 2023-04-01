@@ -7,9 +7,6 @@ var productPage = ["Tous les produits","T-Shirt", "Sweatshirt", "Tenue de sport"
 // Afficher nb produits dans le panier
 drawPanier();
 
-// Si localStor
-
-
 if (productPage.includes(pageName)){
 // FILTRES
 // Récupérer les filtres

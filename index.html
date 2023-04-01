@@ -5,24 +5,204 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IutStyleShop</title>
-    <link rel="stylesheet" href="/styles/colors.css">
-    <link rel="stylesheet" href="/styles/general.css">
-    <link rel="stylesheet" href="/styles/homePage.css">
-    <link rel="stylesheet" href="/styles/carousel.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/homePage.css">
+    <link rel="stylesheet" href="./styles/carousel.css">
 </head>
 <body>
     <header>
-        <!-- Header -->
+        <div class="header-top">
+            <a class="link-to-home" href="index.html"><img src="assets/images/Header-Image/logo.svg" alt="Image logo"></a>
+            <label class="search-bar" for="search"><!-- Search bar -->
+                <div>
+                    <img alt="Image of loupe" src="assets/images/loupe.svg" class="image-loupe">
+                    <input type="text" id="search" name="search" placeholder="Rechercher un article">
+                </div>
+                <a class="small-size button important-text" id="button-rechercher" href="#">Rechercher</a>
+            </label>
+            <div>
+                <button class="navigation-link-header">
+                    <div>
+                        <span class="navigation-link-header-title">Connexion</span>
+                        <span class="navigation-link-header-desc">Inscription</span>
+                    </div>
+                    <img alt="Image of user" src="assets/images/user.svg">
+                </button>
+                <a class="navigation-link-header" href="card/">
+                    <div id="shopping-cart-text">
+                        <span class="navigation-link-header-title">Panier</span>
+                        <span class="navigation-link-header-desc">0 articles</span>
+                    </div>
+                    <img alt="Image of shopping cart" src="assets/images/Header-Image/panier.svg">
+                </a>
+            </div>
+        </div>
+        <div class="header-down">
+            <div class="header-down-link">
+                <a href="all-products/">
+                    <img src="assets/images/Header-Image/grid.svg" alt="grid">
+                    <span>Tous les produits</span>
+                </a>
+                <img src="assets/images/Header-Image/line.svg" alt="horizontal-line" class="horizontal-line">
+                <a href="all-products/t-shirt/">
+                    <img src="assets/images/Header-Image/t-shirt.svg" alt="t-shirt">
+                    <span>T-Shirt</span>
+                </a>
+                <a href="all-products/sweatshirt/">
+                    <img src="assets/images/Header-Image/sweatshirt.svg" alt="sweatshirt">
+                    <span>Sweat-shirt </span>
+                </a>
+                <a href="all-products/sportswear/">
+                    <img src="assets/images/Header-Image/jogger-pants.svg" alt="jogger-pants">
+                    <span>Tenue de sport</span>
+                </a>
+                <a href="all-products/accessories/">
+                    <img src="assets/images/Header-Image/accessories.svg" alt="accessories">
+                    <span>Accessoire</span>
+                </a>
+            </div>
+            <a class="small-size button basic-text" href="#">Promotions</a>
+        </div>
     </header>
+    <!-- Carrousel -->
     <section class="carousel">
         <a class="prev"><img src="assets/icons/arrow.png" alt="Previous button"></a>
         <figure class="carousel-images">
             <img src="assets/images/img1.jpg" alt="1 image">
-            <img src="assets/images/img2.jpeg" alt="2 image">
+            <img src="assets/images/img2.jpg" alt="2 image">
             <img src="assets/images/img3.jpg" alt="3 image">
         </figure>
         <a class="next"><img src="assets/icons/arrow.png" alt="Next button"></a>
     </section>
+    <!-- Section products -->
+    <section id="bestsellers-section">
+        <div id="header-products">
+            <!-- Section title -->
+            <div class="section-title">
+                <span class="section-title-name">Meilleures ventes</span>
+                <span class="section-title-results">3 articles</span>
+            </div>
+            <!-- Btn 'All products' -->
+            <a class="header-products-btn" href="all-products/">
+                Afficher tous les articles
+                <img src="assets/icons/grid.png" alt="Grid">
+            </a>
+        </div>
+        <div id="products">
+            <!-- Article 1 -->
+            <div class="boite_article">
+                <img class="image" src="assets/articles/claquettes/claquettes.png" alt="Claquettes">
+                <div class="bas_article">
+                    <div class="medium-important-text">Lorem ipsum</div>
+                    <div class="stars">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Gris" src="assets/icons/marquer-comme-star-pas-preferee.svg">
+                    </div>
+                    <div class="availablity">
+                        <div class="small-text">Disponibilité :</div>
+                        <div class="small-text green">En stock</div>
+                    </div>
+                    <div class="price-btn">
+                        <div class="price">0,00€</div>
+                        <a class="button medium-size basic-text" href="#">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="boite_article">
+                <img class="image" src="assets/articles/claquettes/claquettes.png" alt="Claquettes">
+                <div class="bas_article">
+                    <div class="medium-important-text">Lorem ipsum</div>
+                    <div class="stars">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Gris" src="assets/icons/marquer-comme-star-pas-preferee.svg">
+                    </div>
+                    <div class="availablity">
+                        <div class="small-text">Disponibilité :</div>
+                        <div class="small-text green">En stock</div>
+                    </div>
+                    <div class="price-btn">
+                        <div class="price">0,00€</div>
+                        <a class="button medium-size basic-text" href="#">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="boite_article">
+                <img class="image" src="assets/articles/claquettes/claquettes.png" alt="Claquettes">
+                <div class="bas_article">
+                    <div class="medium-important-text">Lorem ipsum</div>
+                    <div class="stars">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Jaune" src="assets/icons/marquer-comme-star-preferee.svg">
+                        <img alt="Etoile Gris" src="assets/icons/marquer-comme-star-pas-preferee.svg">
+                    </div>
+                    <div class="availablity">
+                        <div class="small-text">Disponibilité :</div>
+                        <div class="small-text green">En stock</div>
+                    </div>
+                    <div class="price-btn">
+                        <div class="price">0,00€</div>
+                        <a class="button medium-size basic-text" href="#">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <img id="footer-logo" src="assets/icons/logo.svg" alt="IUTStyleShop logo">
+        <!-- Sitemap -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Plan du site</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="all-products/">Tous les articles</a></li>
+                    <li><a href="all-products/t-shirt/">T-Shirt</a></li>
+                    <li><a href="all-products/sweatshirt/">Sweat-shirt</a></li>
+                </ul>
+                <ul>
+                    <li><a href="all-products/sportswear/">Tenue de sport</a></li>
+                    <li><a href="all-products/accessories/">Accessoires</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Credit -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Crédits</h3>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Crédits et aspects légaux</a></li>
+                    <li><a href="#">Créateurs</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Payment methods -->
+        <div class="footer-box-container">
+            <h3 class="footer-box-title">Moyens de paiement</h3>
+            <div class="footer-box">
+                <div id="payment-methods-images">
+                    <img src="assets/icons/visa.svg" alt="Visa logo">
+                    <img src="assets/icons/mastercard.svg" alt="Mastercard logo">
+                    <img src="assets/icons/card.svg" alt="CB logo">    
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-<script src="scripts/carousel.js"></script>
+<script src="./scripts/carousel.js"></script>
+<script src="scripts/all-products.js"></script>
 </html>
