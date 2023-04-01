@@ -4,6 +4,10 @@ pageName = pageName.split(' - ')[0];
 
 var productPage = ["Tous les produits","T-Shirt", "Sweatshirt", "Tenue de sport", "Accessoires"]
 
+// Afficher nb produits dans le panier
+drawPanier();
+
+
 if (productPage.includes(pageName)){
 // FILTRES
 // Récupérer les filtres
@@ -284,17 +288,18 @@ ajouterArticle = function(){
             localStorage.setItem(article.nomDeDossier, JSON.stringify(article));
         }
     }
+    drawPanier();
 }
 
 // PAGE PANIER
 if(pageName == "Panier"){
+    drawPricePanier();
     article = '<div class="article_rectangle big-size"><div class="image_article_panier small-size"></div><div class="informations-article"><div class="dispo_rect_article"><div class="medium-important-text">Lorem ipsum dolor sit amet</div><div class="availablity"><div class="small-text">Disponibilité :</div><div class="small-text green">En stock</div></div><div class="small-text">Taille : S</div></div><div><select class="quantity-size clickable"><option>1</option><option>2</option><option>3</option></select></div><div class="price2">25,99€</div><div><img src="../assets/icons/cross.svg" class="cross clickable"></div></div></div>'
     // Lire localStorage et mettre dans un tableau
     shoopingCard = [];
     for(var i = 0; i < localStorage.length; i++){
         shoopingCard.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
     }
-     
 
     // Si le panier n'est pas vide
     if(shoopingCard != null){
@@ -307,6 +312,12 @@ if(pageName == "Panier"){
             pushArticle = pushArticle.replace('25,99€', shoopingCard[i].prix);
             pushArticle = pushArticle.replace('../assets/icons/cross.svg', retour.repeat(count)+'assets/icons/cross.svg');
             // Quantité = à la quantité de l'article
+            // Si la quantité > 3, rajouter 3 options à la fin de la balise <select>
+            if (shoopingCard[i].quantite > 3){
+                for(var j = 4; j <= shoopingCard[i].quantite; j++){
+                    pushArticle = pushArticle.replace('</select>', '<option>'+ j +'</option></select>');
+                }
+            }                
             pushArticle = pushArticle.replace('<option>'+ shoopingCard[i].quantite +'</option>', '<option selected>'+ shoopingCard[i].quantite +'</option>');
             pushArticle = pushArticle.replace('../assets/images/produits/1/1.jpg', shoopingCard[i].image);
             // Ajouter l'id du nom de dossier à l'élément <img src="../assets/icons/cross.svg" class="cross clickable">
@@ -323,6 +334,36 @@ if(pageName == "Panier"){
             localStorage.removeItem(this.id);
             // Supprimer l'article de la page
             this.parentElement.parentElement.parentElement.remove();
+            drawPanier();
+            drawPricePanier();
         });
     }
+}
+
+function drawPanier(){
+    // Récupérer le nombre d'articles dans le panier
+    var nombreArticles = document.getElementsByClassName('navigation-link-header-desc')[1];
+    nombreArticles.innerHTML = localStorage.length + " articles";
+}
+
+function drawPricePanier(){
+    // Récupérer le prix total du panier
+    var prixTotal = document.getElementsByClassName('price')[0];
+    var total = 0;
+    for(var i = 0; i < localStorage.length; i++){
+        total += parseFloat(JSON.parse(localStorage.getItem(localStorage.key(i))).prix) * parseInt(JSON.parse(localStorage.getItem(localStorage.key(i))).quantite);
+    }
+    // Garder 2 chiffres après la virgule
+    total = total.toFixed(2);
+    prixTotal.innerHTML = total + "€";
+    // Afficher le "sous-total" id: st
+    var st = document.getElementById('st');
+    stnb = total * 0.8;
+    stnb = stnb.toFixed(2);
+    st.innerHTML = stnb + "€";
+    // Afficher taxes id: taxes
+    var taxes = document.getElementById('taxes');
+    taxesnb = total * 0.2;
+    taxesnb = taxesnb.toFixed(2);
+    taxes.innerHTML = taxesnb + "€";
 }

@@ -256,6 +256,7 @@ header{
     height: 118px;
     display: flex;
     justify-content: flex-start;
+    object-fit: contain;
 }
 
 .informations-article{
