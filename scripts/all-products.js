@@ -292,6 +292,8 @@ ajouterArticle = function(){
         }
     }
     drawPanier();
+    // Ouvrir la page panier
+    window.open(retour.repeat(count)+'card/', '_self');
 }
 
 // PAGE PANIER
@@ -505,4 +507,10 @@ if (pageName == 'Article'){
         // Ouvrir la page panier
         window.open(retour.repeat(count)+'card/', '_self');
     });
+}
+
+// Main Page
+if (pageName == 'IutStyleShop'){
+    chargerProduits();
+    ajouterClickableSurProduit();
 }
