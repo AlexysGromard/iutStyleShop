@@ -245,19 +245,20 @@ function chargerProduits(){
     btn = document.getElementsByClassName('btn-add-card');
     var ajouterAuPanier = document.getElementsByClassName('ajouter-au-panier');
     // Ajouter un event listener sur chaque boite_article
-    for(var i = 0; i < productBox.length; i++){
+    for(var i = 0; i < btn.length; i++){
         btn[i].addEventListener('click', ajouterArticle);
     }
 }
 
 ajouterArticle = function(){
+    element = this.parentElement.parentElement.parentElement
     // Ajouter l'article au panier
     // Créer objet article
     var article = {
-        nom: this.getElementsByClassName('medium-important-text')[0].innerHTML,
-        nomDeDossier: this.id,
-        prix: this.getElementsByClassName('price')[0].innerHTML,
-        image: this.getElementsByClassName('image')[0].src,
+        nom: element.getElementsByClassName('medium-important-text')[0].innerHTML,
+        nomDeDossier: element.id,
+        prix: element.getElementsByClassName('price')[0].innerHTML,
+        image: element.getElementsByClassName('image')[0].src,
         quantite: 1
     }
     // Traiter le nom de l'image pour garder le nom de l'image
