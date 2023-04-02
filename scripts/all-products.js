@@ -499,7 +499,7 @@ if (pageName == 'Article'){
             nom: product.nom,
             description: product.description,
             image: nomImage,
-            prix: product.prix,
+            prix: product.prix + "€",
             nomDeDossier: product.nomDeDossier,
             quantite: 1
         };
