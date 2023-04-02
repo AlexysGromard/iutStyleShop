@@ -292,6 +292,8 @@ ajouterArticle = function(){
         }
     }
     drawPanier();
+    // Ouvrir la page panier
+    window.open(retour.repeat(count)+'card/', '_self');
 }
 
 // PAGE PANIER
@@ -497,7 +499,7 @@ if (pageName == 'Article'){
             nom: product.nom,
             description: product.description,
             image: nomImage,
-            prix: product.prix,
+            prix: product.prix + "€",
             nomDeDossier: product.nomDeDossier,
             quantite: 1
         };
@@ -505,4 +507,10 @@ if (pageName == 'Article'){
         // Ouvrir la page panier
         window.open(retour.repeat(count)+'card/', '_self');
     });
+}
+
+// Main Page
+if (pageName == 'IutStyleShop'){
+    chargerProduits();
+    ajouterClickableSurProduit();
 }
