@@ -3,7 +3,7 @@
       {
         "nom": "T-Shirt Rouge IUT",
         "category" : "tshirt",
-        "description": "Description de l'article 1",
+        "description": "T-Shirt Rouge IUT 100% coton avec logo IUT sur la poitrine. Disponible en taille XS, S, M, L, XL. Cet article fait partie des bestSeller.",
         "nomDeDossier": "tshirt_iut_rouge",
         "prix": 19.99,
         "couleur": "red",
@@ -13,7 +13,7 @@
       },{
         "nom": "Sweat Rouge IUT",
         "category" : "sweatshirt",
-        "description": "Description de l'article 1",
+        "description": "Swet Rouge IUT 100% coton avec logo IUT sur la poitrine. Disponible en taille XS, S, M, L, XL. Cet article fait partie des bestSeller. Peut être porté avec un t-shirt rouge IUT.",
         "nomDeDossier": "sweatshirt_iut_rouge",
         "prix": 39.99,
         "couleur": "red",
@@ -23,7 +23,7 @@
       },{
         "nom": "MUG Blanc IUT",
         "category" : "accessories",
-        "description": "Description de l'article 1",
+        "description": "Mug Blanc IUT avec logo. Parfait pour le café du matin. Disponible en blanc. Vous aurez également 0.05€ de remise à la machine à café de l'IUT.",
         "nomDeDossier": "mug_iut",
         "prix": 14.99,
         "couleur": "white",
@@ -33,7 +33,7 @@
       },{
         "nom": "Casquette Noire IUT",
         "category" : "accessories",
-        "description": "Description de l'article 1",
+        "description": "Casquette Noire IUT avec logo. Vous aurez la classe dans Nantes. Disponible en noir.",
         "nomDeDossier": "casquette_noire_iut",
         "prix": 16.99,
         "couleur": "black",
@@ -43,7 +43,7 @@
       },{
         "nom": "Gourde IUT Blanc",
         "category" : "accessories",
-        "description": "Description de l'article 1",
+        "description": "Gourde IUT Blanc avec logo. Parfait pour les plus sportif d'entre-nous. Disponible en blanc.",
         "nomDeDossier": "gourde_iut",
         "prix": 12.99,
         "couleur": "white",
@@ -53,7 +53,7 @@
       },{
         "nom": "Maillot IUT Nike",
         "category" : "sportswear",
-        "description": "Description de l'article 1",
+        "description": "Profitez de notre collaboration avec Nike pour vous offrir le meilleur des maillots de sport. Disponible en noir.",
         "nomDeDossier": "maillot_iut_nike_noir",
         "prix": 34.99,
         "couleur": "black",
@@ -63,7 +63,7 @@
       },{
         "nom": "Maillot blanc IUT pour femme",
         "category" : "sportswear",
-        "description": "Description de l'article 1",
+        "description": "Mesdames, voici le maillot qu'il vous faut pour vos sorties sportives. Profitez en vite ! Disponible en blanc et en noir.",
         "nomDeDossier": "maillot_iut_femme_blanc",
         "prix": 22.99,
         "couleur": "white",
@@ -73,7 +73,7 @@
       },{
         "nom": "Maillot noir IUT pour femme",
         "category" : "sportswear",
-        "description": "Description de l'article 1",
+        "description": "Mesdames, voici le maillot qu'il vous faut pour vos sorties sportives. Profitez en vite ! Disponible en blanc et en noir.",
         "nomDeDossier": "maillot_iut_femme_noir",
         "prix": 22.99,
         "couleur": "black",
@@ -83,7 +83,7 @@
       },{
         "nom": "Maillot blanc IUT pour homme",
         "category" : "sportswear",
-        "description": "Description de l'article 1",
+        "description": "Messieurs, voici le maillot qu'il vous faut pour vos sorties sportives. Profitez en vite ! Disponible en blanc et en noir.",
         "nomDeDossier": "maillot_iut_homme_blanc",
         "prix": 22.99,
         "couleur": "white",
@@ -93,7 +93,7 @@
       },{
         "nom": "Maillot noir IUT pour homme",
         "category" : "sportswear",
-        "description": "Description de l'article 1",
+        "description": "Messieurs, voici le maillot qu'il vous faut pour vos sorties sportives. Profitez en vite ! Disponible en blanc et en noir.",
         "nomDeDossier": "maillot_iut_homme_noir",
         "prix": 22.99,
         "couleur": "black",
@@ -103,7 +103,7 @@
       },{
         "nom": "Sac de sport IUT noir",
         "category" : "accessories",
-        "description": "Description de l'article 1",
+        "description": "Portez vos affaire de sport avec style grâce à ce sac de sport IUT. Disponible en noir.",
         "nomDeDossier": "sac_de_sport_iut_noir",
         "prix": 25.75,
         "couleur": "black",
@@ -113,7 +113,7 @@
       },{
         "nom": "Stylo IUT rouge",
         "category" : "accessories",
-        "description": "Description de l'article 1",
+        "description": "Rédigez vos meilleurs DS avec ce stylo IUT. Disponible en rouge.",
         "nomDeDossier": "stylo_iut_rouge",
         "prix": 3.99,
         "couleur": "red",
@@ -123,7 +123,7 @@
       },{
         "nom": "Sweatshirt IUT noir",
         "category" : "sweatshirt",
-        "description": "Description de l'article 1",
+        "description": "Super sweatshirt IUT noir avec logo. Vous aurez la classe dans Nantes. Disponible en noir, vert et rouge.",
         "nomDeDossier": "sweatshirt_iut_noir",
         "prix": 39.99,
         "couleur": "black",
@@ -133,7 +133,7 @@
       },{
         "nom": "Sweatshirt IUT vert",
         "category" : "sweatshirt",
-        "description": "Description de l'article 1",
+        "description": "Changez les codes couleurs avec ce sweatshirt IUT vert. Disponible en noir, vert et rouge.",
         "nomDeDossier": "sweatshirt_iut_vert",
         "prix": 39.99,
         "couleur": "green",
@@ -143,7 +143,7 @@
       },{
         "nom": "T-Shirt IUT blanc",
         "category" : "tshirt",
-        "description": "Description de l'article 1",
+        "description": "T-Shirt IUT blanc avec logo. Vous aurez la classe dans Nantes. Disponible en blanc.",
         "nomDeDossier": "tshirt_iut_blanc",
         "prix": 19.99,
         "couleur": "black",
