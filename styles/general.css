@@ -237,6 +237,10 @@ header{
     user-select: none;
     cursor: pointer;
     object-fit: contain;
+    transition: padding 0.2s;
+}
+.boite_article .image:hover{
+    padding: 6px;
 }
 
 /*Article_panier*/
@@ -415,7 +419,11 @@ header{
     font-size: var(--medium);
     font-weight: 500;
     cursor: pointer;
-    width: max-content; 
+    width: max-content;
+    transition: color 0.1s; 
+}
+.medium-important-text:hover{
+    color: var(--red);
 }
 
 .bas_article{
