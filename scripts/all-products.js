@@ -405,7 +405,7 @@ function ajouterClickableSurProduit(){
             afficherPageProduit(this.parentElement.parentElement.id)
         });
         productImage[i].addEventListener('click', function(){
-            afficherPageProduit(this.parentElement.parentElement.id)
+            afficherPageProduit(this.parentElement.id)
         });
     }
 }
